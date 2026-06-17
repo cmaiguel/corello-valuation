@@ -1,0 +1,12 @@
+{
+  "status": "placeholder",
+  "totalRaiseM": 2.5,
+  "categories": [
+    { "label": "Product & Engineering", "pct": 40, "amountM": 1.0, "color": "#2563EB", "detail": "Core platform, AI models, integrations", "headcount": "2–3 engineers + 1 product hire" },
+    { "label": "GTM / Sales", "pct": 25, "amountM": 0.625, "color": "#16A34A", "detail": "Sales, outbound, marketing, conferences", "headcount": "1 sales hire" },
+    { "label": "Customer Deployments", "pct": 20, "amountM": 0.5, "color": "#7C3AED", "detail": "Onboarding, implementation, CS", "headcount": "1 CS hire" },
+    { "label": "Infrastructure / AI", "pct": 7.5, "amountM": 0.1875, "color": "#D97706", "detail": "Cloud, AI inference, data pipeline", "headcount": "Operating cost" },
+    { "label": "G&A / Legal", "pct": 7.5, "amountM": 0.1875, "color": "#64748B", "detail": "Legal, accounting, insurance, admin", "headcount": "Fractional" }
+  ],
+  "runway": { "monthsLow": 18, "monthsHigh": 24, "note": "Based on current burn trajectory. Needs actual burn rate to confirm." }
+}

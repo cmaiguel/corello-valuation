@@ -1,0 +1,81 @@
+{
+  "_note": "Template only — replace placeholders with actuals before investor meetings.",
+  "currency": "USD",
+  "startMonth": "2026-07",
+  "periods": 24,
+  "months": [
+    {
+      "month": "2026-07",
+      "label": "Jul 2026",
+      "newContractedRevenue": 0,
+      "recognizedRevenue": 0,
+      "grossProfit": 0,
+      "operatingExpenses": 0,
+      "netBurn": 0,
+      "cashBalance": 0,
+      "note": "Fill in actuals"
+    },
+    {
+      "month": "2026-08",
+      "label": "Aug 2026",
+      "newContractedRevenue": 0,
+      "recognizedRevenue": 0,
+      "grossProfit": 0,
+      "operatingExpenses": 0,
+      "netBurn": 0,
+      "cashBalance": 0,
+      "note": "Fill in actuals"
+    },
+    {
+      "month": "2026-09",
+      "label": "Sep 2026",
+      "newContractedRevenue": 0,
+      "recognizedRevenue": 0,
+      "grossProfit": 0,
+      "operatingExpenses": 0,
+      "netBurn": 0,
+      "cashBalance": 0,
+      "note": "Fill in actuals"
+    },
+    {
+      "month": "2026-10",
+      "label": "Oct 2026",
+      "newContractedRevenue": 0,
+      "recognizedRevenue": 0,
+      "grossProfit": 0,
+      "operatingExpenses": 0,
+      "netBurn": 0,
+      "cashBalance": 0,
+      "note": "Fill in actuals"
+    },
+    {
+      "month": "2026-11",
+      "label": "Nov 2026",
+      "newContractedRevenue": 0,
+      "recognizedRevenue": 0,
+      "grossProfit": 0,
+      "operatingExpenses": 0,
+      "netBurn": 0,
+      "cashBalance": 0,
+      "note": "Fill in actuals"
+    },
+    {
+      "month": "2026-12",
+      "label": "Dec 2026",
+      "newContractedRevenue": 0,
+      "recognizedRevenue": 0,
+      "grossProfit": 0,
+      "operatingExpenses": 0,
+      "netBurn": 0,
+      "cashBalance": 0,
+      "note": "Fill in actuals"
+    }
+  ],
+  "keyAssumptions": {
+    "averageContractValue": "TBD — fill in actuals",
+    "grossMarginTarget": "TBD — fill in actuals",
+    "monthlyBurnPreRaise": "TBD — fill in actuals",
+    "monthlyBurnPostRaise": "TBD — fill in actuals",
+    "runwayMonths": "18–24 (estimated, not confirmed)"
+  }
+}

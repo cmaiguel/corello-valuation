@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Wordmark: "C" + lightbulb-o + "rello" — light version for dark backgrounds -->
+  <text x="0" y="36" font-family="'Geist','Inter',system-ui,-apple-system,sans-serif" font-size="40" font-weight="700" letter-spacing="-1" fill="#EEF2FB">C</text>
+  <!-- Lightbulb replacing the "o" -->
+  <g transform="translate(27, 4)">
+    <!-- glow halo -->
+    <circle cx="13" cy="18" r="12" fill="#F5B800" opacity="0.12"/>
+    <!-- bulb body -->
+    <path d="M13 6C8.6 6 5 9.6 5 14C5 17.2 6.8 20 9.5 21.5V25C9.5 25.6 10 26 10.5 26H15.5C16 26 16.5 25.6 16.5 25V21.5C19.2 20 21 17.2 21 14C21 9.6 17.4 6 13 6Z" fill="#F5B800"/>
+    <!-- base bands -->
+    <rect x="10.5" y="26" width="5" height="1.5" rx="0.5" fill="#E8A800"/>
+    <rect x="10.5" y="28.5" width="5" height="1.5" rx="0.5" fill="#E8A800"/>
+    <!-- filament -->
+    <path d="M10 14 Q13 11 16 14" stroke="white" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <circle cx="13" cy="17" r="1.5" fill="white" opacity="0.5"/>
+  </g>
+  <text x="56" y="36" font-family="'Geist','Inter',system-ui,-apple-system,sans-serif" font-size="40" font-weight="700" letter-spacing="-1" fill="#EEF2FB">rello</text>
+</svg>

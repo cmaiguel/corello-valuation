@@ -1,0 +1,26 @@
+{
+  "status": "template",
+  "dataNote": "Revenue build assumptions — update conversion rates with actual contract data",
+  "contractedRevenueTotalM": 0.7,
+  "contractedRevenueNote": "Signed contracted revenue — NOT ARR, not recognized revenue",
+  "revenueCategories": [
+    { "type": "Software Subscription",   "pctOfContracted": null, "estimatedM": null, "arrConversionLikely": true,  "status": "needs-data", "note": "Software platform fees — most likely to become recurring ARR" },
+    { "type": "Implementation / Setup",  "pctOfContracted": null, "estimatedM": null, "arrConversionLikely": false, "status": "needs-data", "note": "One-time implementation fees — will not convert to ARR" },
+    { "type": "Professional Services",   "pctOfContracted": null, "estimatedM": null, "arrConversionLikely": false, "status": "needs-data", "note": "Ongoing services revenue — may partially recur" },
+    { "type": "Pilot / Milestone",       "pctOfContracted": null, "estimatedM": null, "arrConversionLikely": null,  "status": "needs-data", "note": "Pilot revenue — conversion depends on milestone success" },
+    { "type": "Data / Integration",      "pctOfContracted": null, "estimatedM": null, "arrConversionLikely": null,  "status": "needs-data", "note": "Data setup and integration fees" }
+  ],
+  "conversionAssumptions": {
+    "softwareToARRConversionRate": null,
+    "pilotToARRConversionRate": null,
+    "expectedTimeToFirstARR": null,
+    "note": "Fill in conversion rates once contract-level analysis is complete",
+    "status": "needs-data"
+  },
+  "revenueScenarios": [
+    { "name": "Downside", "totalM": null, "arrM": null, "grossMarginPct": null, "note": "Placeholder", "status": "needs-data" },
+    { "name": "Base",     "totalM": null, "arrM": null, "grossMarginPct": null, "note": "Placeholder", "status": "needs-data" },
+    { "name": "Upside",   "totalM": null, "arrM": null, "grossMarginPct": null, "note": "Placeholder", "status": "needs-data" }
+  ],
+  "investorNote": "Investors will diligence: revenue type breakdown, renewal mechanics, gross margin, and ARR conversion path. Prepare contract-by-contract analysis before partner meetings."
+}

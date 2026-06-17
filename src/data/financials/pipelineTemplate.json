@@ -1,0 +1,48 @@
+{
+  "status": "template",
+  "dataNote": "Pipeline template — add real prospects in a private version. Do not commit customer-identifiable data to a public repository.",
+  "pipeline": [
+    {
+      "prospect": "Prospect 1",
+      "industry": "Precision Manufacturing",
+      "stage": "Discovery",
+      "expectedValueK": null,
+      "probability": null,
+      "weightedValueK": null,
+      "expectedCloseDate": null,
+      "source": "Inbound",
+      "notes": "Replace with real pipeline data",
+      "status": "placeholder"
+    },
+    {
+      "prospect": "Prospect 2",
+      "industry": "Metal Fabrication",
+      "stage": "Proposal",
+      "expectedValueK": null,
+      "probability": null,
+      "weightedValueK": null,
+      "expectedCloseDate": null,
+      "source": "Referral",
+      "notes": "Replace with real pipeline data",
+      "status": "placeholder"
+    },
+    {
+      "prospect": "Prospect 3",
+      "industry": "Industrial Components",
+      "stage": "Negotiation",
+      "expectedValueK": null,
+      "probability": null,
+      "weightedValueK": null,
+      "expectedCloseDate": null,
+      "source": "Outbound",
+      "notes": "Replace with real pipeline data",
+      "status": "placeholder"
+    }
+  ],
+  "stages": ["Prospect", "Discovery", "Demo", "Proposal", "Negotiation", "Closed Won", "Closed Lost"],
+  "pipelineSummary": {
+    "totalProspects": null,
+    "totalWeightedValueK": null,
+    "note": "Update with real pipeline data"
+  }
+}

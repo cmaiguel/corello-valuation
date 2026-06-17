@@ -1,0 +1,33 @@
+{
+  "status": "template",
+  "dataNote": "Cap table template — replace with actual ownership data before sharing with investors",
+  "asOf": null,
+  "currentRound": {
+    "roundSize": 2.5,
+    "preMoneyM": 12.0,
+    "postMoneyM": 14.5,
+    "investorOwnershipPct": 17.24,
+    "instrument": "Preferred equity (Series Seed)",
+    "safeEquivalent": { "postMoneyCapM": 14.5, "note": "Economically equivalent to $12M pre / $2.5M raise" }
+  },
+  "shareholders": [
+    { "name": "Founders (combined)", "type": "Common", "ownershipPreRoundPct": 100, "ownershipPostRoundPct": null, "sharesPlaceholder": true, "note": "Exact split sanitized — replace with actual" },
+    { "name": "Seed Investors (new)", "type": "Preferred", "ownershipPreRoundPct": 0, "ownershipPostRoundPct": 17.24, "sharesPlaceholder": true, "note": "Post-round ownership from $2.5M raise" },
+    { "name": "Option Pool (ESOP)", "type": "Options", "ownershipPreRoundPct": null, "ownershipPostRoundPct": null, "sharesPlaceholder": true, "note": "Option pool size TBD — typically 10–15% pre-Series A" }
+  ],
+  "sensitivityTable": [
+    { "preMoneyM": 8.0,  "postMoneyM": 10.5, "investorPct": 23.81, "founderPct": 76.19, "revenueMultiple": 11.4 },
+    { "preMoneyM": 10.0, "postMoneyM": 12.5, "investorPct": 20.00, "founderPct": 80.00, "revenueMultiple": 14.3 },
+    { "preMoneyM": 11.0, "postMoneyM": 13.5, "investorPct": 18.52, "founderPct": 81.48, "revenueMultiple": 15.7 },
+    { "preMoneyM": 12.0, "postMoneyM": 14.5, "investorPct": 17.24, "founderPct": 82.76, "revenueMultiple": 17.1, "recommended": true },
+    { "preMoneyM": 13.0, "postMoneyM": 15.5, "investorPct": 16.13, "founderPct": 83.87, "revenueMultiple": 18.6 },
+    { "preMoneyM": 14.0, "postMoneyM": 16.5, "investorPct": 15.15, "founderPct": 84.85, "revenueMultiple": 20.0, "founderAnchor": true },
+    { "preMoneyM": 15.0, "postMoneyM": 17.5, "investorPct": 14.29, "founderPct": 85.71, "revenueMultiple": 21.4 },
+    { "preMoneyM": 16.0, "postMoneyM": 18.5, "investorPct": 13.51, "founderPct": 86.49, "revenueMultiple": 22.9 }
+  ],
+  "existingInstruments": {
+    "safes": [],
+    "convertibleNotes": [],
+    "note": "Confirm any existing SAFEs or notes before investor meetings"
+  }
+}

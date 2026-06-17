@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Confidential data — never commit to public repos
+data-room/private/
+confidential/
+src/data/private/
+src/data/actual/
+
+# Sensitive financial files
+*.xlsx
+*.docx
+*.pdf
+
+# Keep output/ CSVs (they are illustrative templates, not actual data)
+# But exclude any files with "actual" or "real" in the name
+output/*actual*
+output/*real*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp

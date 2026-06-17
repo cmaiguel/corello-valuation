@@ -1,0 +1,128 @@
+{
+  "disclaimer": "Benchmark companies are directional fundraising context. Disclosed round sizes do not equal disclosed valuations.",
+  "seed": [
+    {
+      "company": "Allie AI",
+      "stage": "Seed",
+      "roundSizeDisplay": "$5.2M",
+      "roundSizeM": 5.2,
+      "category": "Manufacturing AI / factory intelligence",
+      "relevance": "Factory intelligence and operations AI — close positioning to Corello",
+      "domain": "allie.ai",
+      "sourceUrl": "https://www.thesaasnews.com/news/allie-ai-raises-5-2-million-in-seed-round/",
+      "confidence": "medium"
+    },
+    {
+      "company": "Manex AI",
+      "stage": "Seed",
+      "roundSizeDisplay": "€8M (~$9.3M)",
+      "roundSizeM": 9.3,
+      "category": "Industrial quality / autonomous factories",
+      "relevance": "Industrial AI for manufacturing quality and process steering",
+      "domain": "manex.ai",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/manex-ai-closes-8-million-seed-round-to-enable-autonomous-factories-302471679.html",
+      "confidence": "high"
+    },
+    {
+      "company": "Matta",
+      "stage": "Seed",
+      "roundSizeDisplay": "$14M",
+      "roundSizeM": 14,
+      "category": "Industrial AI / sentient factories",
+      "relevance": "AI for factory intelligence, defect detection, and root-cause analysis",
+      "domain": "matta.ai",
+      "sourceUrl": "https://tech.eu/2025/12/10/matta-raises-14m-to-develop-sentient-factory-technology/",
+      "confidence": "medium"
+    },
+    {
+      "company": "Atomic Industries",
+      "stage": "Seed",
+      "roundSizeDisplay": "$17M",
+      "roundSizeM": 17,
+      "category": "AI-enabled manufacturing",
+      "relevance": "AI applied to manufacturing and industrial production systems",
+      "domain": "atomic.industries",
+      "sourceUrl": "https://techcrunch.com/2023/12/04/atomic-industries-closes-17m-seed-to-exascale-americas-industrial-base/",
+      "confidence": "high"
+    },
+    {
+      "company": "Machina Labs",
+      "stage": "Seed / Series A",
+      "roundSizeDisplay": "$32M",
+      "roundSizeM": 32,
+      "category": "AI-native metal manufacturing",
+      "relevance": "AI robotics for high-mix, low-volume metal forming — overlapping HMLV market",
+      "domain": "machinalabs.ai",
+      "sourceUrl": "https://techcrunch.com/2023/02/07/machina-labs-raises-32m-series-a-for-its-ai-powered-metal-forming-robots/",
+      "confidence": "high"
+    }
+  ],
+  "growth": [
+    {
+      "company": "Paperless Parts",
+      "stage": "Series B",
+      "roundSizeDisplay": "$36M",
+      "roundSizeM": 36,
+      "category": "Manufacturing quoting & estimating platform",
+      "relevance": "Direct market overlap — manufacturing quoting software for job shops and SMMs",
+      "domain": "paperlessparts.com",
+      "sourceUrl": "https://www.paperlessparts.com/",
+      "confidence": "high"
+    },
+    {
+      "company": "EthonAI",
+      "stage": "Series A",
+      "roundSizeDisplay": "$16.5M",
+      "roundSizeM": 16.5,
+      "category": "Manufacturing analytics",
+      "relevance": "Later-stage industrial analytics benchmark",
+      "domain": "ethon.ai",
+      "sourceUrl": "https://www.indexventures.com/perspectives/ethonai-series-a/",
+      "confidence": "high"
+    },
+    {
+      "company": "Cogna",
+      "stage": "Series A",
+      "roundSizeDisplay": "$15M",
+      "roundSizeM": 15,
+      "category": "AI-generated enterprise software",
+      "relevance": "AI software for operational workflows",
+      "domain": "cogna.co",
+      "sourceUrl": "https://techcrunch.com/2024/11/11/from-self-driving-cars-to-ai-that-writes-enterprise-software-cogna-founder-raises-15m/",
+      "confidence": "high"
+    },
+    {
+      "company": "Daedalus",
+      "stage": "Series A",
+      "roundSizeDisplay": "$21M",
+      "roundSizeM": 21,
+      "category": "AI-powered precision manufacturing",
+      "relevance": "Later-stage AI manufacturing benchmark",
+      "domain": "daedalus.de",
+      "sourceUrl": "https://techcrunch.com/2024/02/08/daedalus-manufacturing-jonas-schneider-openai-robotics-raises-21-million/",
+      "confidence": "high"
+    },
+    {
+      "company": "Guidewheel",
+      "stage": "Series B",
+      "roundSizeDisplay": "$31M",
+      "roundSizeM": 31,
+      "category": "FactoryOps AI",
+      "relevance": "Later-stage factory operations benchmark",
+      "domain": "guidewheel.com",
+      "sourceUrl": "https://www.businesswire.com/news/home/20240813639025/en/Guidewheel-raises-%2431M-Series-B",
+      "confidence": "high"
+    },
+    {
+      "company": "Tractian",
+      "stage": "Series C",
+      "roundSizeDisplay": "$120M",
+      "roundSizeM": 120,
+      "category": "Industrial AI / maintenance",
+      "relevance": "Later-stage industrial AI platform benchmark",
+      "domain": "tractian.com",
+      "sourceUrl": "https://tractian.com/en/blog/tractian-raises-series-c-to-eliminate-industrial-downtime-worldwide",
+      "confidence": "high"
+    }
+  ]
+}

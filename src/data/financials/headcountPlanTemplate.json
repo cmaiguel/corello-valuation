@@ -1,0 +1,19 @@
+{
+  "status": "template",
+  "dataNote": "Headcount plan template — update with actual team size and planned hires",
+  "currentTeam": {
+    "headcount": null,
+    "note": "Add current team size",
+    "status": "needs-data"
+  },
+  "plannedHires": [
+    { "role": "Senior Engineer",           "department": "Engineering",  "quarter": "Q1", "salaryK": null, "priority": "critical", "fundedBy": "Product & Engineering allocation", "status": "placeholder" },
+    { "role": "Engineer",                  "department": "Engineering",  "quarter": "Q2", "salaryK": null, "priority": "high",     "fundedBy": "Product & Engineering allocation", "status": "placeholder" },
+    { "role": "Account Executive",         "department": "Sales",        "quarter": "Q1", "salaryK": null, "priority": "critical", "fundedBy": "GTM allocation", "status": "placeholder" },
+    { "role": "Customer Success Manager",  "department": "CS",           "quarter": "Q2", "salaryK": null, "priority": "high",     "fundedBy": "CS allocation", "status": "placeholder" },
+    { "role": "Product Manager",           "department": "Product",      "quarter": "Q3", "salaryK": null, "priority": "medium",   "fundedBy": "Product & Engineering allocation", "status": "placeholder" }
+  ],
+  "departments": ["Engineering", "Product", "Sales", "Customer Success", "G&A"],
+  "totalHeadcountPostRound": null,
+  "totalSalaryBurdenM": null
+}

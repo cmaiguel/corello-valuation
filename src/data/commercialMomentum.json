@@ -1,0 +1,28 @@
+{
+  "caveat": "Contracted revenue and pipeline are not ARR. ARR target depends on conversion.",
+  "items": [
+    {
+      "label": "Contracted revenue",
+      "amountM": 0.7,
+      "color": "#2563EB",
+      "description": "Signed contracted revenue, Jan–Jun 2026. Not ARR.",
+      "note": "Jan–Jun 2026"
+    },
+    {
+      "label": "Near-term pipeline",
+      "amountM": 0.3,
+      "color": "#60A5FA",
+      "description": "Expected to convert in the next couple of months.",
+      "note": "Next 2–3 months"
+    },
+    {
+      "label": "Additional pipeline",
+      "amountM": 0.95,
+      "color": "#CBD5E1",
+      "description": "Expected by EOY 2026 / early 2027.",
+      "note": "EOY 2026 / early 2027"
+    }
+  ],
+  "totalM": 1.95,
+  "targetARRM": 1.7
+}

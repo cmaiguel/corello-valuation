@@ -1,0 +1,119 @@
+{
+  "disclaimer": "Benchmark companies are used for directional market context only. Disclosed round sizes do not equal disclosed valuations. Inferred valuation ranges should be treated as estimates only. No implied valuation is stated for any private company unless publicly disclosed.",
+  "seedComps": [
+    {
+      "company": "Corello",
+      "stage": "Seed",
+      "roundSizeM": 2.5,
+      "currency": "USD",
+      "category": "Industrial AI / Manufacturing Intelligence",
+      "relevance": "This company — raising $2.5M Seed",
+      "source": "Internal",
+      "isTarget": true,
+      "note": "$700K contracted revenue (not ARR)"
+    },
+    {
+      "company": "Allie AI",
+      "stage": "Seed",
+      "roundSizeM": 5.2,
+      "currency": "USD",
+      "category": "Manufacturing AI / Factory Intelligence",
+      "relevance": "Similar manufacturing AI / factory operations positioning",
+      "source": "https://www.thesaasnews.com/news/allie-ai-raises-5-2-million-in-seed-round/",
+      "isTarget": false,
+      "note": "Seed comp — round size only, valuation not disclosed"
+    },
+    {
+      "company": "Manex AI",
+      "stage": "Seed",
+      "roundSizeM": 9.3,
+      "currency": "USD",
+      "originalAmount": "€8M",
+      "category": "Industrial Quality Management / Process Steering Agents",
+      "relevance": "Industrial AI for manufacturing quality and autonomous factories",
+      "source": "https://www.prnewswire.com/news-releases/manex-ai-closes-8-million-seed-round-to-enable-autonomous-factories-302471679.html",
+      "isTarget": false,
+      "note": "EUR 8M ≈ USD 9.3M. Seed comp — round size only, valuation not disclosed"
+    },
+    {
+      "company": "Matta",
+      "stage": "Seed",
+      "roundSizeM": 14.0,
+      "currency": "USD",
+      "category": "Industrial AI / Sentient Factories",
+      "relevance": "AI for factory intelligence, defect detection, and root-cause analysis",
+      "source": "https://tech.eu/2025/12/10/matta-raises-14m-to-develop-sentient-factory-technology/",
+      "isTarget": false,
+      "note": "Seed comp — round size only, valuation not disclosed"
+    },
+    {
+      "company": "Atomic Industries",
+      "stage": "Seed",
+      "roundSizeM": 17.0,
+      "currency": "USD",
+      "category": "AI-Enabled Manufacturing / Tool-and-Die Automation",
+      "relevance": "AI applied to manufacturing and industrial production systems",
+      "source": "https://techcrunch.com/2023/12/04/atomic-industries-closes-17m-seed-to-exascale-americas-industrial-base/",
+      "isTarget": false,
+      "note": "Seed comp — round size only, valuation not disclosed"
+    }
+  ],
+  "laterStageComps": [
+    {
+      "company": "EthonAI",
+      "stage": "Series A",
+      "roundSizeM": 16.5,
+      "currency": "USD",
+      "originalAmount": "CHF 15M",
+      "category": "AI-Powered Manufacturing Analytics",
+      "relevance": "Later-stage industrial analytics benchmark",
+      "source": "https://www.indexventures.com/perspectives/ethonai-series-a/",
+      "isTarget": false,
+      "note": "Series A — later-stage benchmark only"
+    },
+    {
+      "company": "Cogna",
+      "stage": "Series A",
+      "roundSizeM": 15.0,
+      "currency": "USD",
+      "category": "AI-Generated Enterprise Software for Industrial Workflows",
+      "relevance": "AI software for operational workflows; adjacent to manufacturing systems",
+      "source": "https://techcrunch.com/2024/11/11/from-self-driving-cars-to-ai-that-writes-enterprise-software-cogna-founder-raises-15m/",
+      "isTarget": false,
+      "note": "Series A — later-stage benchmark only"
+    },
+    {
+      "company": "Daedalus",
+      "stage": "Series A",
+      "roundSizeM": 21.0,
+      "currency": "USD",
+      "category": "AI-Powered Precision Manufacturing",
+      "relevance": "Later-stage AI manufacturing benchmark",
+      "source": "https://techcrunch.com/2024/02/08/daedalus-manufacturing-jonas-schneider-openai-robotics-raises-21-million/",
+      "isTarget": false,
+      "note": "Series A — later-stage benchmark only"
+    },
+    {
+      "company": "Guidewheel",
+      "stage": "Series B",
+      "roundSizeM": 31.0,
+      "currency": "USD",
+      "category": "AI-Powered FactoryOps",
+      "relevance": "Later-stage factory operations software benchmark",
+      "source": "https://www.businesswire.com/news/home/20240813639025/en/Guidewheel-raises-%2431M-Series-B-to-scale-AI-powered-FactoryOps-across-factory-floors-globally",
+      "isTarget": false,
+      "note": "Series B — later-stage benchmark only"
+    },
+    {
+      "company": "Tractian",
+      "stage": "Series C",
+      "roundSizeM": 120.0,
+      "currency": "USD",
+      "category": "Industrial Copilot / Maintenance AI",
+      "relevance": "Later-stage industrial AI platform benchmark",
+      "source": "https://tractian.com/en/blog/tractian-raises-series-c-to-eliminate-industrial-downtime-worldwide",
+      "isTarget": false,
+      "note": "Series C — later-stage benchmark only"
+    }
+  ]
+}

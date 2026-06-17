@@ -1,0 +1,10 @@
+Pre-Money ($M),Post-Money ($M),Investor Ownership (%),Founder/Existing Ownership (%),Contracted Revenue Multiple,Notes
+8.0,10.5,23.81,76.19,11.4x,Below fair range
+10.0,12.5,20.00,80.00,14.3x,Investor-friendly floor
+11.0,13.5,18.52,81.48,15.7x,Within fair range
+12.0,14.5,17.24,82.76,17.1x,RECOMMENDED — base case
+13.0,15.5,16.13,83.87,18.6x,Upper end of fair range
+14.0,16.5,15.15,84.85,20.0x,Founder anchor / aggressive
+15.0,17.5,14.29,85.71,21.4x,Stretch — strong contracts required
+16.0,18.5,13.51,86.49,22.9x,Avoid — requires ARR proof
+18.0,20.5,12.20,87.80,25.7x,Avoid — not justified at Seed

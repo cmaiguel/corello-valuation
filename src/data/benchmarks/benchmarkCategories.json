@@ -1,0 +1,9 @@
+{
+  "disclaimer": "Benchmark companies are used for directional market context only. Disclosed round sizes do not equal disclosed valuations. Inferred valuation ranges are estimates only. No private company valuations are stated unless publicly disclosed.",
+  "categories": [
+    { "id": "industrial-ai-seed",    "label": "Industrial AI — Seed",      "description": "Direct seed-stage comps in industrial AI and manufacturing",   "count": 4 },
+    { "id": "industrial-ai-growth",  "label": "Industrial AI — Growth",    "description": "Later-stage industrial AI benchmarks (Series A–C)",           "count": 5 },
+    { "id": "seed-ownership",        "label": "Seed Ownership Benchmarks", "description": "Standard investor ownership % at Seed stage",                 "count": 3 },
+    { "id": "saas-context",          "label": "SaaS Context",              "description": "General SaaS valuation context — NOT directly applicable to Corello (pre-ARR)", "count": 0 }
+  ]
+}

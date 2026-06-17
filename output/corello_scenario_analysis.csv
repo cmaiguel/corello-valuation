@@ -1,0 +1,4 @@
+Scenario,Pre-Money ($M),Post-Money ($M),Round Size ($M),Investor Ownership (%),Contracted Revenue Multiple,Interpretation,Recommendation
+Downside,9.5,12.0,2.5,20.83,13.6x,Below fair range — services-heavy contracts or weak ARR conversion proof,Only if investor pushes hard
+Base (Recommended),12.0,14.5,2.5,17.24,17.1x,Credible contracted demand; fair Seed ownership; disciplined ask,RECOMMENDED
+Upside,14.5,17.0,2.5,14.71,20.7x,Software-first contracts likely to renew; strategic lead investor,Achievable with strong contract quality

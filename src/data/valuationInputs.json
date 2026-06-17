@@ -1,0 +1,29 @@
+{
+  "company": "Corello",
+  "productName": "Corello Capital Room",
+  "stage": "Seed",
+  "sector": "Industrial AI / Manufacturing Intelligence",
+  "roundSizeM": 2.5,
+  "preMoneyM": 12,
+  "postMoneyM": 14.5,
+  "investorOwnershipPct": 17.24,
+  "contractedRevenueM": 0.7,
+  "contractedRevenuePeriod": "January to June 2026",
+  "nearTermPipelineM": 0.3,
+  "nearTermPipelineNote": "Expected to convert in the next couple of months",
+  "additionalPipelineM": 0.95,
+  "additionalPipelineNote": "Expected by EOY 2026 / early 2027",
+  "totalCommercialVisibilityM": 1.95,
+  "targetYearEndARRM": 1.7,
+  "revenueCaveat": "Contracted revenue and pipeline are not ARR. ARR target depends on conversion.",
+  "sanityChecks": [
+    { "label": "$12M / $700K contracted revenue", "multiple": "17.1x" },
+    { "label": "$12M / $1.95M commercial visibility", "multiple": "6.2x" },
+    { "label": "$12M / $1.7M target ARR", "multiple": "7.1x" }
+  ],
+  "sensitivityTable": [
+    { "preMoneyM": 10, "postMoneyM": 12.5, "investorPct": 20.0 },
+    { "preMoneyM": 12, "postMoneyM": 14.5, "investorPct": 17.24 },
+    { "preMoneyM": 14, "postMoneyM": 16.5, "investorPct": 15.15 }
+  ]
+}

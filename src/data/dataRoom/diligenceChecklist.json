@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "lastUpdated": null,
+  "totalItems": 60,
+  "categories": [
+    {
+      "category": "Corporate",
+      "icon": "Building",
+      "items": [
+        { "id": "corp-1",  "item": "Certificate of incorporation",              "status": "missing", "owner": "Founder", "priority": "critical", "investorRelevance": "Required for any investment",    "notes": "", "fileLink": null },
+        { "id": "corp-2",  "item": "Bylaws / articles of organization",         "status": "missing", "owner": "Founder", "priority": "critical", "investorRelevance": "Required for any investment",    "notes": "", "fileLink": null },
+        { "id": "corp-3",  "item": "Current cap table (fully diluted)",         "status": "draft",   "owner": "Founder", "priority": "critical", "investorRelevance": "Reviewed before term sheet",     "notes": "", "fileLink": null },
+        { "id": "corp-4",  "item": "Board composition and minutes",             "status": "missing", "owner": "Founder", "priority": "high",     "investorRelevance": "Reviewed in diligence",          "notes": "", "fileLink": null },
+        { "id": "corp-5",  "item": "Existing SAFEs, notes, or side letters",   "status": "missing", "owner": "Founder", "priority": "critical", "investorRelevance": "Affects cap table math",          "notes": "", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Fundraising",
+      "icon": "TrendingUp",
+      "items": [
+        { "id": "fr-1",  "item": "Pitch deck (latest version)",                 "status": "draft",   "owner": "Founder", "priority": "critical", "investorRelevance": "First document reviewed",        "notes": "", "fileLink": null },
+        { "id": "fr-2",  "item": "Valuation model and assumptions",             "status": "ready",   "owner": "Founder", "priority": "critical", "investorRelevance": "Supports valuation ask",          "notes": "This dashboard", "fileLink": null },
+        { "id": "fr-3",  "item": "Investor one-pager / executive summary",      "status": "draft",   "owner": "Founder", "priority": "high",     "investorRelevance": "Used for outreach",               "notes": "", "fileLink": null },
+        { "id": "fr-4",  "item": "Fundraising target investor list",            "status": "missing", "owner": "Founder", "priority": "high",     "investorRelevance": "Internal tool",                  "notes": "", "fileLink": null },
+        { "id": "fr-5",  "item": "Term sheet template / SAFE template",         "status": "missing", "owner": "Legal",   "priority": "medium",   "investorRelevance": "Used when offers come in",       "notes": "", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Financials",
+      "icon": "BarChart3",
+      "items": [
+        { "id": "fin-1",  "item": "Bank statements (6–12 months)",               "status": "missing", "owner": "Founder", "priority": "critical", "investorRelevance": "Cash position verification",    "notes": "", "fileLink": null },
+        { "id": "fin-2",  "item": "P&L / income statement (actual)",             "status": "missing", "owner": "Finance", "priority": "critical", "investorRelevance": "Reviewed in diligence",         "notes": "", "fileLink": null },
+        { "id": "fin-3",  "item": "Cash flow statement",                         "status": "missing", "owner": "Finance", "priority": "high",     "investorRelevance": "Burn and runway validation",    "notes": "", "fileLink": null },
+        { "id": "fin-4",  "item": "Monthly burn rate (actual)",                  "status": "needs-review", "owner": "Founder", "priority": "critical", "investorRelevance": "Core diligence metric",   "notes": "", "fileLink": null },
+        { "id": "fin-5",  "item": "Revenue breakdown: software vs services",     "status": "needs-review", "owner": "Founder", "priority": "critical", "investorRelevance": "Determines ARR quality",  "notes": "", "fileLink": null },
+        { "id": "fin-6",  "item": "12–24 month financial forecast",              "status": "draft",   "owner": "Founder", "priority": "high",     "investorRelevance": "Required by most investors",    "notes": "Template in this dashboard", "fileLink": null },
+        { "id": "fin-7",  "item": "Gross margin calculation",                    "status": "needs-review", "owner": "Founder", "priority": "critical", "investorRelevance": "Quality-of-revenue signal", "notes": "", "fileLink": null },
+        { "id": "fin-8",  "item": "Use of funds breakdown",                      "status": "ready",   "owner": "Founder", "priority": "high",     "investorRelevance": "How will you spend the money",  "notes": "Placeholder in this dashboard", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Customers & Contracts",
+      "icon": "Users",
+      "items": [
+        { "id": "cust-1", "item": "Signed contract copies",                      "status": "missing", "owner": "Legal",   "priority": "critical", "investorRelevance": "Validates contracted revenue",   "notes": "Required before term sheet", "fileLink": null },
+        { "id": "cust-2", "item": "Revenue breakdown by customer",               "status": "needs-review", "owner": "Founder", "priority": "critical", "investorRelevance": "Concentration risk",     "notes": "", "fileLink": null },
+        { "id": "cust-3", "item": "Payment terms and billing schedule",          "status": "needs-review", "owner": "Founder", "priority": "critical", "investorRelevance": "Cash collection quality",  "notes": "", "fileLink": null },
+        { "id": "cust-4", "item": "Cancellation / termination clauses",         "status": "needs-review", "owner": "Legal",   "priority": "critical", "investorRelevance": "Revenue durability",       "notes": "", "fileLink": null },
+        { "id": "cust-5", "item": "Renewal and expansion mechanics",             "status": "needs-review", "owner": "Founder", "priority": "high",     "investorRelevance": "ARR conversion path",       "notes": "", "fileLink": null },
+        { "id": "cust-6", "item": "Customer references (2–3 willing contacts)", "status": "missing", "owner": "Founder", "priority": "high",     "investorRelevance": "Reference calls are standard",   "notes": "", "fileLink": null },
+        { "id": "cust-7", "item": "Customer deployment timeline",                "status": "needs-review", "owner": "Founder", "priority": "high",     "investorRelevance": "Revenue timing visibility",  "notes": "", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Product",
+      "icon": "Package",
+      "items": [
+        { "id": "prod-1", "item": "Product demo (live or recorded)",             "status": "missing", "owner": "Founder", "priority": "critical", "investorRelevance": "First thing investors want to see", "notes": "", "fileLink": null },
+        { "id": "prod-2", "item": "Product roadmap (6–18 months)",               "status": "draft",   "owner": "Product", "priority": "high",     "investorRelevance": "Shows direction and priorities",   "notes": "", "fileLink": null },
+        { "id": "prod-3", "item": "Product usage metrics / DAU / sessions",     "status": "missing", "owner": "Product", "priority": "high",     "investorRelevance": "Validates product-market fit",      "notes": "", "fileLink": null },
+        { "id": "prod-4", "item": "Architecture diagram",                        "status": "missing", "owner": "Eng",     "priority": "medium",   "investorRelevance": "Technical diligence",               "notes": "", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Technology & AI",
+      "icon": "Brain",
+      "items": [
+        { "id": "tech-1", "item": "AI model documentation / approach",           "status": "draft",   "owner": "Eng",   "priority": "high",     "investorRelevance": "Core IP / differentiation",          "notes": "", "fileLink": null },
+        { "id": "tech-2", "item": "Data sources and data rights",                "status": "needs-review", "owner": "Eng", "priority": "high",  "investorRelevance": "AI diligence standard",             "notes": "", "fileLink": null },
+        { "id": "tech-3", "item": "AI inference cost model",                     "status": "needs-review", "owner": "Eng", "priority": "high",  "investorRelevance": "Gross margin risk",                  "notes": "", "fileLink": null },
+        { "id": "tech-4", "item": "Security and data handling practices",        "status": "missing", "owner": "Eng",   "priority": "high",     "investorRelevance": "Enterprise customer requirement",    "notes": "", "fileLink": null },
+        { "id": "tech-5", "item": "IP ownership confirmation",                   "status": "missing", "owner": "Legal", "priority": "critical", "investorRelevance": "Required before any term sheet",     "notes": "", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Legal & IP",
+      "icon": "Shield",
+      "items": [
+        { "id": "leg-1", "item": "IP assignment agreements (all founders)",      "status": "missing", "owner": "Legal",   "priority": "critical", "investorRelevance": "Standard before seed close",       "notes": "", "fileLink": null },
+        { "id": "leg-2", "item": "NDAs and confidentiality agreements",          "status": "missing", "owner": "Legal",   "priority": "medium",   "investorRelevance": "Reviewed if concerns flagged",      "notes": "", "fileLink": null },
+        { "id": "leg-3", "item": "Employment agreements (key employees)",        "status": "missing", "owner": "Legal",   "priority": "high",     "investorRelevance": "Retention risk diligence",          "notes": "", "fileLink": null },
+        { "id": "leg-4", "item": "Patent applications (if any)",                 "status": "not-applicable", "owner": "Legal", "priority": "low", "investorRelevance": "Noted if applicable",            "notes": "Mark N/A if none filed", "fileLink": null }
+      ]
+    },
+    {
+      "category": "HR & Team",
+      "icon": "Users",
+      "items": [
+        { "id": "hr-1", "item": "Founder bios / LinkedIn profiles",              "status": "ready",   "owner": "Founder", "priority": "high",     "investorRelevance": "Team is #1 for seed investors",     "notes": "", "fileLink": null },
+        { "id": "hr-2", "item": "Advisor list and agreements",                   "status": "missing", "owner": "Founder", "priority": "medium",   "investorRelevance": "Signals credibility",               "notes": "", "fileLink": null },
+        { "id": "hr-3", "item": "Hiring plan (post-raise)",                      "status": "draft",   "owner": "Founder", "priority": "high",     "investorRelevance": "Use of funds validation",           "notes": "Template in this dashboard", "fileLink": null }
+      ]
+    },
+    {
+      "category": "Market & Benchmarks",
+      "icon": "BarChart2",
+      "items": [
+        { "id": "mkt-1", "item": "Market size analysis (TAM/SAM/SOM)",           "status": "draft",   "owner": "Founder", "priority": "high",     "investorRelevance": "Required in pitch deck",            "notes": "", "fileLink": null },
+        { "id": "mkt-2", "item": "Competitive landscape map",                    "status": "draft",   "owner": "Founder", "priority": "high",     "investorRelevance": "Standard investor ask",             "notes": "", "fileLink": null },
+        { "id": "mkt-3", "item": "Benchmark round data (comps)",                 "status": "ready",   "owner": "Founder", "priority": "medium",   "investorRelevance": "Supports valuation conversation",   "notes": "In this dashboard", "fileLink": null }
+      ]
+    }
+  ]
+}

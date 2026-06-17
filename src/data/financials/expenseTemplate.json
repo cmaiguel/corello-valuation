@@ -1,0 +1,44 @@
+{
+  "_note": "Template only — replace placeholders with actuals before investor meetings.",
+  "currency": "USD",
+  "period": "Monthly",
+  "categories": [
+    {
+      "category": "Payroll & Benefits",
+      "subcategories": [
+        { "label": "Engineering", "monthlyAmount": 0, "headcount": 0, "note": "Fill in actuals" },
+        { "label": "Sales & Marketing", "monthlyAmount": 0, "headcount": 0, "note": "Fill in actuals" },
+        { "label": "Customer Success", "monthlyAmount": 0, "headcount": 0, "note": "Fill in actuals" },
+        { "label": "G&A", "monthlyAmount": 0, "headcount": 0, "note": "Fill in actuals" }
+      ]
+    },
+    {
+      "category": "AI & Infrastructure",
+      "subcategories": [
+        { "label": "Cloud hosting (AWS/GCP/Azure)", "monthlyAmount": 0, "note": "Fill in actuals" },
+        { "label": "AI inference costs", "monthlyAmount": 0, "note": "Fill in actuals" },
+        { "label": "Data & tooling", "monthlyAmount": 0, "note": "Fill in actuals" }
+      ]
+    },
+    {
+      "category": "Go-To-Market",
+      "subcategories": [
+        { "label": "Sales tools & CRM", "monthlyAmount": 0, "note": "Fill in actuals" },
+        { "label": "Marketing & events", "monthlyAmount": 0, "note": "Fill in actuals" }
+      ]
+    },
+    {
+      "category": "G&A",
+      "subcategories": [
+        { "label": "Legal & compliance", "monthlyAmount": 0, "note": "Fill in actuals" },
+        { "label": "Finance & accounting", "monthlyAmount": 0, "note": "Fill in actuals" },
+        { "label": "Office & misc", "monthlyAmount": 0, "note": "Fill in actuals" }
+      ]
+    }
+  ],
+  "totals": {
+    "totalMonthlyBurn": 0,
+    "annualizedBurn": 0,
+    "note": "Fill in actuals — these are placeholders only"
+  }
+}

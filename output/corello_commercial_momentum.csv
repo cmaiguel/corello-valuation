@@ -1,0 +1,6 @@
+Category,Amount,Confidence Weight,Weighted Amount,Note
+Contracted Revenue,$700,000,100%,$700,000,Signed contracted revenue Jan–Jun. Not ARR.
+NDA / LOI Pipeline,$300,000,60%,$180,000,Manufacturers at signed NDA/LOI stage
+Active Conversations,$800,000,25%,$200,000,Qualified potential customers in active dialogue
+Total,$1,800,000,,,$1.08M probability-weighted
+Probability-Weighted Total,$1,080,000,,,Not ARR — commercial validation only

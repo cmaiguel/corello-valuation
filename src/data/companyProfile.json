@@ -1,0 +1,32 @@
+{
+  "company": "Corello",
+  "legalName": "Corello, Inc.",
+  "stage": "Seed",
+  "sector": "Industrial AI / Manufacturing Intelligence",
+  "description": "AI-native manufacturing intelligence platform for small and mid-sized manufacturers.",
+  "founded": "2023",
+  "hq": "United States",
+  "website": "corello.ai",
+  "contact": "carlos.maiguel@corello.ai",
+  "raise": {
+    "roundSize": 2.5,
+    "instrument": "Priced equity (or post-money SAFE at $14.5M cap)",
+    "targetPreMoney": 12.0,
+    "postMoney": 14.5,
+    "investorOwnership": 17.24,
+    "founderOwnership": 82.76,
+    "status": "Raising"
+  },
+  "traction": {
+    "contractedRevenue": 0.7,
+    "contractedRevenueNote": "Signed contracted revenue — NOT ARR, NOT recognized revenue",
+    "isARR": false,
+    "customers": null,
+    "deployments": null,
+    "note": "Customer count and deployment details are sanitized for data room version"
+  },
+  "positioning": "Early-stage vertical AI / industrial AI company with strong contracted customer validation. Not priced as a mature SaaS ARR company.",
+  "keyMessage": "We have $700K in signed contracted revenue. We are raising $2.5M at a $12M pre-money valuation, giving investors ~17.24% ownership and funding conversion of contracted demand into repeatable ARR.",
+  "avoidLanguage": ["$700K ARR", "ARR of $700K", "run-rate revenue of $700K"],
+  "useLanguage": ["$700K in contracted revenue", "$700K in signed contracted commitments", "contracted revenue, not ARR"]
+}
