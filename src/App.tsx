@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { T } from "./theme";
 import LoginPage from "./components/LoginPage";
 import Layout from "./components/Layout";
@@ -8,6 +9,7 @@ import Valuation from "./components/Valuation";
 import Benchmarks from "./components/Benchmarks";
 import UseOfFundsMilestones from "./components/UseOfFundsMilestones";
 import Financials from "./components/Financials";
+import BenchmarksPage from "./pages/BenchmarksPage";
 
 function isLoggedIn() {
   return localStorage.getItem("cr_auth") === "1";
@@ -32,20 +34,28 @@ export default function App() {
   if (!authed) return <LoginPage onLogin={handleLogin} />;
 
   return (
-    <Layout onLogout={handleLogout} userEmail="carlos.maiguel@corello.ai">
-      <Snapshot />
-      <Divider />
-      <Traction />
-      <Divider />
-      <Valuation />
-      <Divider />
-      <Benchmarks />
-      <Divider />
-      <UseOfFundsMilestones />
-      <Divider />
-      <Financials />
-      <Footer />
-    </Layout>
+    <Routes>
+      <Route path="/" element={
+        <Layout onLogout={handleLogout} userEmail="carlos.maiguel@corello.ai">
+          <Snapshot />
+          <Divider />
+          <Traction />
+          <Divider />
+          <Valuation />
+          <Divider />
+          <Benchmarks />
+          <Divider />
+          <UseOfFundsMilestones />
+          <Divider />
+          <Financials />
+          <Footer />
+        </Layout>
+      } />
+      <Route path="/benchmarks" element={
+        <BenchmarksPage userEmail="carlos.maiguel@corello.ai" onLogout={handleLogout} />
+      } />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { T } from "../theme";
 import LogoMark from "./LogoMark";
 
@@ -62,7 +63,7 @@ export default function Layout({ children, onLogout, userEmail }: Props) {
             <LogoMark size="sm" />
           </button>
 
-          <nav style={{ display: "flex", gap: 2, flex: 1 }}>
+          <nav style={{ display: "flex", gap: 2, flex: 1, alignItems: "center" }}>
             {NAV_ITEMS.map(({ id, label }) => {
               const isActive = active === id;
               return (
@@ -78,6 +79,22 @@ export default function Layout({ children, onLogout, userEmail }: Props) {
                 </button>
               );
             })}
+            <div style={{ width: 1, height: 18, background: T.border, margin: "0 4px" }} />
+            <Link to="/benchmarks" style={{
+              padding: "6px 12px", borderRadius: 8,
+              background: "transparent",
+              color: T.textMuted,
+              fontWeight: 400,
+              fontSize: 13, fontFamily: T.font,
+              textDecoration: "none",
+              transition: "color 0.15s",
+              whiteSpace: "nowrap",
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = T.text)}
+              onMouseLeave={e => (e.currentTarget.style.color = T.textMuted)}
+            >
+              Benchmark Intelligence ↗
+            </Link>
           </nav>
 
           <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
