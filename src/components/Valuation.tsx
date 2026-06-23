@@ -92,9 +92,8 @@ export default function Valuation() {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 20, flexShrink: 0 }}>
             {[
-              { label: "RAISE",              value: "$2.5M"   },
-              { label: "POST-MONEY",         value: "$14.5M"  },
-              { label: "INVESTOR OWNERSHIP", value: "17.24%"  },
+              { label: "RAISE",      value: "$2.5M"  },
+              { label: "POST-MONEY", value: "$14.5M" },
             ].map(({ label, value }) => (
               <div key={label}>
                 <div style={{ fontSize: 10, fontWeight: 700, color: T.textSubtle, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 4, fontFamily: T.fontMono }}>{label}</div>

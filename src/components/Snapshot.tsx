@@ -68,7 +68,7 @@ export default function Snapshot() {
       <div className="cr-grid-3">
         <GoldCard label="RAISE" value="$2.5M" />
         <GoldCard label="PRE-MONEY VALUATION" value="$12M" />
-        <GoldCard label="POST-MONEY VALUATION" value="$14.5M" sub="17.24% new investor ownership" />
+        <GoldCard label="POST-MONEY VALUATION" value="$14.5M" />
       </div>
 
       {/* Row 2 — 4 small traction cards */}

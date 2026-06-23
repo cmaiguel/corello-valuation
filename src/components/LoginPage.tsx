@@ -28,7 +28,7 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
 
   const inputStyle: React.CSSProperties = {
     width: "100%", padding: "11px 14px", fontSize: 14,
-    border: `1.5px solid ${T.border2}`, borderRadius: T.rMd,
+    border: `1.5px solid ${T.border2}`, borderRadius: 12,
     background: T.surface2, color: T.text, fontFamily: T.font,
     outline: "none", boxSizing: "border-box",
     transition: "border-color 0.15s",
@@ -55,13 +55,13 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
           boxShadow: "0 8px 48px rgba(0,0,0,0.4)",
         }}>
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 28 }}>
-            <LogoMark size="lg" />
+            <LogoMark size="xl" />
           </div>
 
-          <h1 style={{ fontSize: 22, fontWeight: 700, color: T.text, textAlign: "center", letterSpacing: "-0.03em", margin: "0 0 6px" }}>
-            Corello Capital Room
+          <h1 style={{ fontSize: 17, fontWeight: 700, color: T.gold, textAlign: "center", letterSpacing: "-0.03em", margin: "0 0 4px" }}>
+            Capital Room
           </h1>
-          <p style={{ fontSize: 13, color: T.textMuted, textAlign: "center", margin: "0 0 28px" }}>
+          <p style={{ fontSize: 12, color: T.textMuted, textAlign: "center", margin: "0 0 28px" }}>
             Investor access
           </p>
 
@@ -97,7 +97,7 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
               width: "100%", padding: "12px", fontSize: 14, fontWeight: 700,
               background: loading ? T.surface3 : T.gold,
               color: loading ? T.textMuted : "#0A0E1A",
-              border: "none", borderRadius: T.rMd,
+              border: "none", borderRadius: 12,
               cursor: loading ? "not-allowed" : "pointer", fontFamily: T.font,
               transition: "all 0.15s", marginTop: 4,
               letterSpacing: "0.01em",
@@ -106,14 +106,10 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
             </button>
           </form>
 
-          <p style={{ fontSize: 11, color: T.textSubtle, textAlign: "center", marginTop: 20 }}>
-            Confidential financial materials
-          </p>
         </div>
 
         <p style={{ fontSize: 10, color: T.textSubtle, textAlign: "center", marginTop: 16, lineHeight: 1.6 }}>
-          Demo auth for local fundraising preparation only.<br />
-          Replace with real authentication before deploying externally.
+          Corello Inc. © 2026
         </p>
       </div>
     </div>

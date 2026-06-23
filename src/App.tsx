@@ -3,11 +3,11 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { T } from "./theme";
 import LoginPage from "./components/LoginPage";
 import Layout from "./components/Layout";
+import LogoMark from "./components/LogoMark";
 import Snapshot from "./components/Snapshot";
+import Market from "./components/Market";
 import Traction from "./components/Traction";
 import Valuation from "./components/Valuation";
-import Benchmarks from "./components/Benchmarks";
-import UseOfFundsMilestones from "./components/UseOfFundsMilestones";
 import Financials from "./components/Financials";
 import BenchmarksPage from "./pages/BenchmarksPage";
 
@@ -39,13 +39,11 @@ export default function App() {
         <Layout onLogout={handleLogout} userEmail="carlos.maiguel@corello.ai">
           <Snapshot />
           <Divider />
+          <Market />
+          <Divider />
           <Traction />
           <Divider />
           <Valuation />
-          <Divider />
-          <Benchmarks />
-          <Divider />
-          <UseOfFundsMilestones />
           <Divider />
           <Financials />
           <Footer />
@@ -65,15 +63,11 @@ function Divider() {
 
 function Footer() {
   return (
-    <footer style={{ borderTop: `1px solid ${T.border}`, paddingTop: 32, marginTop: 80, paddingBottom: 40 }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
-        <div>
-          <div style={{ fontSize: 13, fontWeight: 700, color: T.text }}>Corello Capital Room</div>
-          <div style={{ fontSize: 12, color: T.textMuted, marginTop: 2 }}>Seed Round · Confidential</div>
-        </div>
-        <div style={{ fontSize: 11, color: T.textSubtle, maxWidth: 520, textAlign: "right", lineHeight: 1.7 }}>
-          Contracted revenue ($700K) represents signed customer commitments and is not ARR or recognized revenue. This document does not constitute a fairness opinion, financial advice, or an offer to sell securities.
-        </div>
+    <footer style={{ borderTop: `1px solid ${T.border}`, paddingTop: 40, marginTop: 80, paddingBottom: 48 }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+        <LogoMark size="md" />
+        <div style={{ fontSize: 15, fontWeight: 700, color: T.gold, letterSpacing: "-0.02em" }}>Capital Room</div>
+        <div style={{ fontSize: 12, color: T.textSubtle }}>Corello Inc. · 2026</div>
       </div>
     </footer>
   );
