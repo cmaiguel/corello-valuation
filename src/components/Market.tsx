@@ -1,5 +1,6 @@
 import React from "react";
 import { T } from "../theme";
+import "./dataroom.css";
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
 
@@ -40,13 +41,13 @@ const LADDER = [
 
 export default function Market() {
   return (
-    <section id="market" style={{ paddingTop: 80, paddingBottom: 80 }}>
+    <section id="market" className="dr-section">
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 64, alignItems: "start" }}>
+      <div className="dr-market-grid">
 
         {/* Left: header + copy */}
-        <div style={{ position: "sticky", top: 80 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.18em", marginBottom: 16, fontFamily: T.fontMono }}>
+        <div className="dr-market-sticky" style={{ position: "sticky", top: 88 }}>
+          <div className="dr-eyebrow">
             Opportunity
           </div>
           <h2 style={{
@@ -148,39 +149,32 @@ export default function Market() {
             href="https://corello-market-insight.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
+            className="dr-cta"
             style={{
               marginTop: 40,
               display: "block",
-              padding: "28px 24px",
-              background: `linear-gradient(135deg, ${T.gold}14 0%, ${T.gold}08 100%)`,
-              border: `1.5px solid ${T.gold}35`,
-              borderRadius: 14,
+              padding: "24px 26px",
+              background: T.surface,
+              border: `1px solid ${T.goldBorder}`,
+              borderLeft: `3px solid ${T.gold}`,
+              borderRadius: 12,
               textDecoration: "none",
-              transition: "all 0.25s",
               cursor: "pointer",
             }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = T.gold;
-              (e.currentTarget as HTMLAnchorElement).style.background = `linear-gradient(135deg, ${T.gold}22 0%, ${T.gold}14 100%)`;
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = `${T.gold}35`;
-              (e.currentTarget as HTMLAnchorElement).style.background = `linear-gradient(135deg, ${T.gold}14 0%, ${T.gold}08 100%)`;
-            }}
           >
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
               <div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 6, fontFamily: T.fontMono }}>
+                <div style={{ fontSize: 10, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 8, fontFamily: T.fontMono }}>
                   Explore Further
                 </div>
                 <div style={{ fontSize: 16, fontWeight: 800, color: T.text, fontFamily: SHARP, letterSpacing: "-0.02em" }}>
-                  Dive into market research →
+                  Interactive market research
                 </div>
-                <div style={{ fontSize: 12, color: T.textMuted, marginTop: 8, maxWidth: 320 }}>
-                  Interactive market intelligence dashboards showing manufacturing software trends, TAM growth, and competitive positioning.
+                <div style={{ fontSize: 12, color: T.textMuted, marginTop: 8, maxWidth: 340, lineHeight: 1.55 }}>
+                  Manufacturing software trends, TAM growth, and competitive positioning.
                 </div>
               </div>
-              <div style={{ fontSize: 32, flexShrink: 0 }}>📊</div>
+              <div style={{ fontSize: 22, color: T.gold, flexShrink: 0, fontFamily: SHARP }}>→</div>
             </div>
           </a>
         </div>

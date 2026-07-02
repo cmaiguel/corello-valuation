@@ -1,0 +1,56 @@
+/* Corello Data Room — shared layout & responsive rules */
+
+/* Keep anchored section titles clear of the sticky header */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Consistent vertical rhythm across every section */
+.dr-section {
+  padding-top: clamp(48px, 9vw, 80px);
+  padding-bottom: clamp(48px, 9vw, 80px);
+}
+
+/* Section eyebrow / kicker */
+.dr-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: #F5C200;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: 14px;
+  font-family: 'Geist Mono', 'Fira Code', monospace;
+}
+
+/* Market: two-column layout that collapses cleanly on tablet/mobile */
+.dr-market-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Opportunity CTA */
+.dr-cta {
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.dr-cta:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .dr-market-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  /* Let the left column flow normally instead of sticking */
+  .dr-market-sticky {
+    position: static !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .dr-market-grid {
+    gap: 32px;
+  }
+}

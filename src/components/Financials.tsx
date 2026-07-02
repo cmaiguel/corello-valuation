@@ -5,6 +5,7 @@ import Benchmarks from "./Benchmarks";
 import UseOfFundsMilestones from "./UseOfFundsMilestones";
 import Milestones from "./Milestones";
 import RevenueProforma from "./RevenueProforma";
+import "./dataroom.css";
 
 type CapRow =
   | { type: "group"; label: string; authorized: string; color: string }
@@ -103,7 +104,7 @@ export default function Financials() {
   const [unlocked, setUnlocked] = useState(false);
 
   return (
-    <section id="financials" style={{ paddingTop: 80, paddingBottom: 80 }}>
+    <section id="financials" className="dr-section">
 
       <div style={{ marginBottom: 52 }}>
         <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.25em", marginBottom: 14, fontFamily: T.fontMono }}>

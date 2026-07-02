@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { T } from "../theme";
 import BenchmarkCard from "./benchmarks/BenchmarkCard";
 import { BENCHMARK_GROUPS, STAGE_TAB_LABELS, Stage } from "../data/benchmarks";
@@ -15,7 +14,7 @@ export default function Benchmarks() {
     .slice(0, 6);
 
   return (
-    <section id="benchmarks" style={{ paddingTop: 80, paddingBottom: 80 }}>
+    <section id="benchmarks" style={{ paddingTop: 48, paddingBottom: 8 }}>
 
       {/* Section header */}
       <div style={{ marginBottom: 52 }}>
@@ -51,27 +50,8 @@ export default function Benchmarks() {
       </div>
 
       {/* Top-6 company cards */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16, marginBottom: 20 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
         {top6.map(c => <BenchmarkCard key={c.company} company={c} />)}
-      </div>
-
-      {/* Link to full benchmark page */}
-      <div style={{ textAlign: "right" }}>
-        <Link to="/benchmarks" style={{
-          display: "inline-flex", alignItems: "center", gap: 8,
-          fontSize: 13, fontWeight: 600, color: T.gold,
-          textDecoration: "none", fontFamily: SHARP,
-          padding: "10px 20px",
-          background: T.goldBg,
-          border: `1px solid ${T.goldBorder}`,
-          borderRadius: 8,
-          transition: "opacity 0.15s",
-        }}
-          onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
-          onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
-        >
-          Full Benchmark ↗
-        </Link>
       </div>
 
     </section>

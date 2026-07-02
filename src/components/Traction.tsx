@@ -1,6 +1,7 @@
 import React from "react";
 import { T } from "../theme";
 import "./snapshot.css";
+import "./dataroom.css";
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
 
@@ -30,7 +31,7 @@ const SEGMENTS = [
 
 export default function Traction() {
   return (
-    <section id="traction" className="cr-traction" style={{ paddingTop: 80, paddingBottom: 80 }}>
+    <section id="traction" className="cr-traction dr-section">
       <SectionHeader
         eyebrow="Commercial Traction"
         title="$1.95M total commercial visibility."
