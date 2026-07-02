@@ -6,7 +6,10 @@ import DataRoomLayout from "./components/DataRoomLayout";
 import Snapshot from "./components/Snapshot";
 import Market from "./components/Market";
 import Traction from "./components/Traction";
+import Technology from "./components/Technology";
+import Legal from "./components/Legal";
 import Financials from "./components/Financials";
+import LogoMark from "./components/LogoMark";
 
 function isDataRoomAuthed() {
   return localStorage.getItem("dataroom_auth") === "1";
@@ -47,7 +50,11 @@ export default function App() {
           <Divider />
           <Traction />
           <Divider />
+          <Technology />
+          <Divider />
           <Financials />
+          <Divider />
+          <Legal />
           <DataRoomFooter />
         </DataRoomLayout>
       } />
@@ -62,8 +69,11 @@ function Divider() {
 
 function DataRoomFooter() {
   return (
-    <footer style={{ borderTop: `1px solid ${T.border}`, paddingTop: 40, marginTop: 80, paddingBottom: 48 }}>
-      <div style={{ textAlign: "center", fontSize: 11, color: T.textSubtle, fontFamily: "'Geist Mono', monospace" }}>
+    <footer style={{ borderTop: `1px solid ${T.border}`, paddingTop: 60, marginTop: 80, paddingBottom: 48, textAlign: "center" }}>
+      <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
+        <LogoMark size="sm" />
+      </div>
+      <div style={{ fontSize: 11, color: T.textSubtle, fontFamily: "'Geist Mono', monospace" }}>
         Corello Inc. © 2026 · Confidential
       </div>
     </footer>

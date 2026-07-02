@@ -33,62 +33,40 @@ function SmallCard({ label, value, sub }: { label: string; value: string; sub?: 
 
 export default function Snapshot() {
   return (
-    <section id="snapshot" style={{ paddingTop: 80, paddingBottom: 80 }}>
+    <section id="snapshot" style={{ paddingTop: 48, paddingBottom: 40 }}>
       <div style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: 300,
         textAlign: "center",
       }}>
-        <div style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 8,
-          marginBottom: 24,
-          background: T.goldBg,
-          border: `1px solid ${T.goldBorder}`,
-          borderRadius: 99,
-          padding: "6px 16px",
-        }}>
-          <div style={{ width: 6, height: 6, borderRadius: "50%", background: T.gold }} />
-          <span style={{
-            fontSize: 11,
-            fontWeight: 700,
-            color: T.gold,
-            fontFamily: T.fontMono,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
+        <div style={{ maxWidth: 860 }}>
+          <h1 style={{
+            fontSize: "clamp(2.8rem, 5.2vw, 4.4rem)",
+            fontWeight: 800,
+            color: T.text,
+            margin: "0 0 20px",
+            fontFamily: SHARP,
+            letterSpacing: "-0.04em",
+            lineHeight: 1.2,
           }}>
-            Seed Round
-          </span>
+            Raising a <span style={{ color: T.gold, fontWeight: 800 }}>$2.5M Seed Round</span>
+          </h1>
+
+          <p style={{
+            fontSize: "clamp(0.95rem, 1.8vw, 1.15rem)",
+            color: T.textMuted,
+            margin: "0",
+            maxWidth: 720,
+            lineHeight: 1.7,
+            fontFamily: T.font,
+            fontWeight: 400,
+            letterSpacing: "-0.01em",
+          }}>
+            Corello turns manufacturing tribal knowledge into operational intelligence for small and mid-sized manufacturers.
+          </p>
         </div>
-
-        <h1 style={{
-          fontSize: "clamp(3.2rem, 6vw, 5rem)",
-          fontWeight: 800,
-          color: T.text,
-          margin: "0 0 16px",
-          fontFamily: SHARP,
-          letterSpacing: "-0.05em",
-          lineHeight: 1,
-        }}>
-          Raising <span style={{ color: T.gold }}>$2.5M</span>
-        </h1>
-
-        <p style={{
-          fontSize: "clamp(1rem, 2vw, 1.4rem)",
-          color: T.textMuted,
-          margin: 0,
-          maxWidth: 600,
-          lineHeight: 1.6,
-          fontFamily: SHARP,
-          fontWeight: 400,
-          letterSpacing: "-0.01em",
-        }}>
-          To scale AI-native manufacturing intelligence for small and mid-sized manufacturers.
-        </p>
       </div>
     </section>
   );

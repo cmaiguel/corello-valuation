@@ -32,7 +32,7 @@ const REVENUE_PATH = [
 ];
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
-const FINANCIALS_PASS = "corello";
+const FINANCIALS_PASS = "corello123";
 
 function LockedState({ onUnlock }: { onUnlock: () => void }) {
   const [pass, setPass] = useState("");

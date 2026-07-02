@@ -8,7 +8,9 @@ const NAV_ITEMS = [
   { id: "snapshot", label: "Snapshot" },
   { id: "market", label: "Opportunity" },
   { id: "traction", label: "Traction" },
+  { id: "technology", label: "Technology" },
   { id: "financials", label: "Financials" },
+  { id: "legal", label: "Legal" },
 ];
 
 interface Props {
@@ -59,34 +61,8 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
           justifyContent: "space-between",
           gap: 40,
         }}>
-          {/* Logo & Title */}
-          <div style={{ display: "flex", alignItems: "center", gap: 16, minWidth: 0 }}>
-            <LogoMark size="md" />
-            <div style={{ minWidth: 0 }}>
-              <div style={{
-                fontSize: "clamp(12px, 2vw, 14px)",
-                fontWeight: 800,
-                color: T.text,
-                fontFamily: SHARP,
-                letterSpacing: "-0.02em",
-                margin: 0,
-                lineHeight: 1.2,
-              }}>
-                Corello: AI-Native Manufacturing Intelligence
-              </div>
-              <div style={{
-                fontSize: 10,
-                fontWeight: 700,
-                color: T.gold,
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                fontFamily: T.fontMono,
-                marginTop: 2,
-              }}>
-                Data Room
-              </div>
-            </div>
-          </div>
+          {/* Logo Only */}
+          <LogoMark size="md" />
 
           {/* Navigation */}
           <nav style={{
@@ -105,10 +81,11 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
                   padding: "8px 14px",
                   fontSize: "clamp(10px, 1vw, 12px)",
                   fontWeight: active === id ? 700 : 400,
-                  background: active === id ? T.surface2 : "transparent",
+                  background: "transparent",
                   color: active === id ? T.gold : T.textMuted,
-                  border: active === id ? `1px solid ${T.gold}30` : "1px solid transparent",
-                  borderRadius: 8,
+                  border: "none",
+                  borderBottom: active === id ? `2px solid ${T.gold}` : "2px solid transparent",
+                  borderRadius: 0,
                   cursor: "pointer",
                   fontFamily: SHARP,
                   transition: "all 0.15s",
@@ -116,14 +93,12 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
                 }}
                 onMouseEnter={(e) => {
                   if (active !== id) {
-                    (e.currentTarget as HTMLButtonElement).style.background = T.surface2;
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = T.border;
+                    (e.currentTarget as HTMLButtonElement).style.color = T.text;
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (active !== id) {
-                    (e.currentTarget as HTMLButtonElement).style.background = "transparent";
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = "transparent";
+                    (e.currentTarget as HTMLButtonElement).style.color = T.textMuted;
                   }
                 }}
               >

@@ -41,29 +41,28 @@ export default function DataRoomLogin({ onLogin }: DataRoomLoginProps) {
         maxWidth: 420,
       }}>
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: 48 }}>
-          <div style={{ marginBottom: 24 }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: 48 }}>
+          <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
             <LogoMark size="lg" />
           </div>
           <h1 style={{
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: 800,
-            color: T.text,
+            color: T.gold,
             margin: "0 0 8px",
             fontFamily: SHARP,
             letterSpacing: "-0.03em",
           }}>
-            Corello Data Room
+            Data Room
           </h1>
           <p style={{
-            fontSize: 12,
+            fontSize: 11,
             color: T.textMuted,
             margin: 0,
             fontFamily: T.fontMono,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
+            letterSpacing: "0.08em",
           }}>
-            Secure Investor Access
+            Investor Access
           </p>
         </div>
 
