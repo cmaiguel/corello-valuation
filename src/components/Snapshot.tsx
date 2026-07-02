@@ -33,50 +33,62 @@ function SmallCard({ label, value, sub }: { label: string; value: string; sub?: 
 
 export default function Snapshot() {
   return (
-    <section id="snapshot" className="cr-snapshot" style={{ paddingTop: 80, paddingBottom: 80 }}>
-      {/* Hero */}
-      <div>
+    <section id="snapshot" style={{ paddingTop: 80, paddingBottom: 80 }}>
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: 300,
+        textAlign: "center",
+      }}>
         <div style={{
-          display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 20,
-          background: T.goldBg, border: `1px solid ${T.goldBorder}`,
-          borderRadius: 99, padding: "5px 14px",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 8,
+          marginBottom: 24,
+          background: T.goldBg,
+          border: `1px solid ${T.goldBorder}`,
+          borderRadius: 99,
+          padding: "6px 16px",
         }}>
           <div style={{ width: 6, height: 6, borderRadius: "50%", background: T.gold }} />
-          <span style={{ fontSize: 11, fontWeight: 700, color: T.gold, fontFamily: T.fontMono, textTransform: "uppercase", letterSpacing: "0.2em" }}>
-            Corello Seed Round
+          <span style={{
+            fontSize: 11,
+            fontWeight: 700,
+            color: T.gold,
+            fontFamily: T.fontMono,
+            textTransform: "uppercase",
+            letterSpacing: "0.15em",
+          }}>
+            Seed Round
           </span>
         </div>
 
-        <h1 className="cr-hero-title" style={{ color: T.text, fontFamily: SHARP }}>
-          Raising $2.5M at{" "}
-          <span style={{ color: T.gold }}>$12M pre-money</span>{" "}
-          valuation.
+        <h1 style={{
+          fontSize: "clamp(3.2rem, 6vw, 5rem)",
+          fontWeight: 800,
+          color: T.text,
+          margin: "0 0 16px",
+          fontFamily: SHARP,
+          letterSpacing: "-0.05em",
+          lineHeight: 1,
+        }}>
+          Raising <span style={{ color: T.gold }}>$2.5M</span>
         </h1>
 
-        <div className="cr-hero-sub" style={{
-          fontWeight: 600,
-          fontFamily: T.fontMono,
+        <p style={{
+          fontSize: "clamp(1rem, 2vw, 1.4rem)",
           color: T.textMuted,
-          textTransform: "uppercase",
-          letterSpacing: "0.15em",
+          margin: 0,
+          maxWidth: 600,
+          lineHeight: 1.6,
+          fontFamily: SHARP,
+          fontWeight: 400,
+          letterSpacing: "-0.01em",
         }}>
-          Corello: AI-Native Manufacturing Intelligence
-        </div>
-      </div>
-
-      {/* Row 1 — 3 large gold cards */}
-      <div className="cr-grid-3">
-        <GoldCard label="RAISE" value="$2.5M" />
-        <GoldCard label="PRE-MONEY VALUATION" value="$12M" />
-        <GoldCard label="POST-MONEY VALUATION" value="$14.5M" />
-      </div>
-
-      {/* Row 2 — 4 small traction cards */}
-      <div className="cr-grid-4">
-        <SmallCard label="CONTRACTED REVENUE" value="$700K" sub="In just 6 months of 2026 operations" />
-        <SmallCard label="NEAR-TERM PIPELINE" value="$300K" sub="Expected next 4 months" />
-        <SmallCard label="ADDITIONAL PIPELINE" value="$950K" sub="EOY 2026 / early 2027" />
-        <SmallCard label="TARGET YEAR-END ARR" value="~$1.7M" sub="Target, not current ARR" />
+          To scale AI-native manufacturing intelligence for small and mid-sized manufacturers.
+        </p>
       </div>
     </section>
   );

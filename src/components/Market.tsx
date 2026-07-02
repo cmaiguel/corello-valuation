@@ -47,7 +47,7 @@ export default function Market() {
         {/* Left: header + copy */}
         <div style={{ position: "sticky", top: 80 }}>
           <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.18em", marginBottom: 16, fontFamily: T.fontMono }}>
-            Market Opportunity
+            Opportunity
           </div>
           <h2 style={{
             fontSize: "clamp(2.4rem, 4vw, 3.6rem)", fontWeight: 800,
