@@ -142,6 +142,47 @@ export default function Market() {
           <div style={{ marginTop: 20, paddingLeft: 32, fontSize: 11, color: T.textSubtle, fontFamily: T.fontMono, lineHeight: 1.6 }}>
             Market sizing based on industry research and Corello internal estimates.
           </div>
+
+          {/* Market Insights CTA */}
+          <a
+            href="https://corello-market-insight.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              marginTop: 40,
+              display: "block",
+              padding: "28px 24px",
+              background: `linear-gradient(135deg, ${T.gold}14 0%, ${T.gold}08 100%)`,
+              border: `1.5px solid ${T.gold}35`,
+              borderRadius: 14,
+              textDecoration: "none",
+              transition: "all 0.25s",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = T.gold;
+              (e.currentTarget as HTMLAnchorElement).style.background = `linear-gradient(135deg, ${T.gold}22 0%, ${T.gold}14 100%)`;
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = `${T.gold}35`;
+              (e.currentTarget as HTMLAnchorElement).style.background = `linear-gradient(135deg, ${T.gold}14 0%, ${T.gold}08 100%)`;
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 6, fontFamily: T.fontMono }}>
+                  Explore Further
+                </div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: T.text, fontFamily: SHARP, letterSpacing: "-0.02em" }}>
+                  Dive into market research →
+                </div>
+                <div style={{ fontSize: 12, color: T.textMuted, marginTop: 8, maxWidth: 320 }}>
+                  Interactive market intelligence dashboards showing manufacturing software trends, TAM growth, and competitive positioning.
+                </div>
+              </div>
+              <div style={{ fontSize: 32, flexShrink: 0 }}>📊</div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
