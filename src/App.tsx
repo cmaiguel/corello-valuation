@@ -14,6 +14,7 @@ import TeamBios from "./components/TeamBios";
 import LegalDocuments from "./components/LegalDocuments";
 import DueDiligence from "./components/DueDiligence";
 import PatentProvisional from "./components/PatentProvisional";
+import TechStack from "./components/TechStack";
 import BenchmarksPage from "./pages/BenchmarksPage";
 
 function isLoggedIn() {
@@ -53,6 +54,8 @@ export default function App() {
           <Financials />
           <Divider />
           <ProductRoadmap />
+          <Divider />
+          <TechStack />
           <Divider />
           <TeamBios />
           <Divider />

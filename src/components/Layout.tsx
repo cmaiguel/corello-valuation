@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: "valuation",    label: "Valuation" },
   { id: "financials",   label: "Financials" },
   { id: "roadmap",      label: "Roadmap" },
+  { id: "tech",         label: "Tech Stack" },
   { id: "team",         label: "Team" },
   { id: "legal",        label: "Legal" },
   { id: "dd",           label: "Demo" },
