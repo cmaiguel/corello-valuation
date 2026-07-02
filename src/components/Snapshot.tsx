@@ -33,7 +33,7 @@ function SmallCard({ label, value, sub }: { label: string; value: string; sub?: 
 
 export default function Snapshot() {
   return (
-    <section id="snapshot" style={{ paddingTop: 48, paddingBottom: 40 }}>
+    <section id="snapshot" style={{ paddingTop: "clamp(40px, 8vw, 48px)", paddingBottom: "clamp(32px, 6vw, 40px)" }}>
       <div style={{
         display: "flex",
         flexDirection: "column",
@@ -41,7 +41,7 @@ export default function Snapshot() {
         justifyContent: "center",
         textAlign: "center",
       }}>
-        <div style={{ maxWidth: 860 }}>
+        <div style={{ maxWidth: 860, paddingLeft: "clamp(16px, 4vw, 24px)", paddingRight: "clamp(16px, 4vw, 24px)" }}>
           <h1 style={{
             fontSize: "clamp(2.8rem, 5.2vw, 4.4rem)",
             fontWeight: 800,

@@ -55,11 +55,12 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
         <div style={{
           maxWidth: 1400,
           margin: "0 auto",
-          padding: "20px 32px",
+          padding: "clamp(16px, 4vw, 20px) clamp(16px, 5vw, 32px)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: 40,
+          gap: "clamp(12px, 3vw, 40px)",
+          flexWrap: "wrap",
         }}>
           {/* Logo Only */}
           <LogoMark size="md" />
@@ -72,14 +73,17 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
             justifyContent: "center",
             minWidth: 0,
             overflowX: "auto",
-          }}>
+            order: 3,
+            width: "100%",
+            marginTop: "clamp(0px, 5vw, 8px)",
+          }} className="mobile-nav">
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
                 style={{
-                  padding: "8px 14px",
-                  fontSize: "clamp(10px, 1vw, 12px)",
+                  padding: "clamp(6px, 2vw, 8px) clamp(8px, 2vw, 14px)",
+                  fontSize: "clamp(9px, 1.5vw, 12px)",
                   fontWeight: active === id ? 700 : 400,
                   background: "transparent",
                   color: active === id ? T.gold : T.textMuted,
@@ -111,8 +115,8 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
           <button
             onClick={onLogout}
             style={{
-              padding: "8px 14px",
-              fontSize: 10,
+              padding: "clamp(7px, 2vw, 8px) clamp(10px, 2vw, 14px)",
+              fontSize: "clamp(9px, 1.2vw, 10px)",
               fontWeight: 700,
               background: "transparent",
               color: T.textMuted,
@@ -143,7 +147,7 @@ export default function DataRoomLayout({ children, onLogout }: Props) {
       <main style={{
         maxWidth: 1400,
         margin: "0 auto",
-        padding: "0 32px",
+        padding: "0 clamp(16px, 5vw, 32px)",
       }}>
         {children}
       </main>

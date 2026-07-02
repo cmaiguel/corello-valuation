@@ -95,9 +95,9 @@ function Card({ children, gold }: { children: React.ReactNode; gold?: boolean })
       background: gold ? "linear-gradient(135deg, rgba(245,194,0,0.08) 0%, rgba(245,194,0,0.02) 100%)" : T.surface,
       border: `1px solid ${gold ? "rgba(245,194,0,0.18)" : T.border}`,
       borderRadius: 12,
-      padding: "24px",
+      padding: "clamp(16px, 4vw, 24px)",
       lineHeight: 1.6,
-      fontSize: 14,
+      fontSize: "clamp(13px, 1.5vw, 14px)",
       color: T.text,
       fontFamily: T.font,
     }}>
@@ -114,8 +114,8 @@ export default function Technology() {
   const [unlocked, setUnlocked] = useState(false);
 
   return (
-    <section id="technology" style={{ paddingTop: 48, paddingBottom: 80 }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+    <section id="technology" style={{ paddingTop: "clamp(40px, 8vw, 48px)", paddingBottom: "clamp(48px, 10vw, 80px)" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", paddingLeft: "clamp(16px, 4vw, 24px)", paddingRight: "clamp(16px, 4vw, 24px)" }}>
         {!unlocked ? (
           <LockedState onUnlock={() => setUnlocked(true)} />
         ) : (
