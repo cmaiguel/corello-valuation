@@ -8,6 +8,11 @@ const NAV_ITEMS = [
   { id: "traction",     label: "Traction" },
   { id: "valuation",    label: "Valuation" },
   { id: "financials",   label: "Financials" },
+  { id: "roadmap",      label: "Roadmap" },
+  { id: "team",         label: "Team" },
+  { id: "legal",        label: "Legal" },
+  { id: "dd",           label: "Demo" },
+  { id: "patents",      label: "Patents" },
 ];
 
 interface Props {

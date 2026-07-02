@@ -9,6 +9,11 @@ import Market from "./components/Market";
 import Traction from "./components/Traction";
 import Valuation from "./components/Valuation";
 import Financials from "./components/Financials";
+import ProductRoadmap from "./components/ProductRoadmap";
+import TeamBios from "./components/TeamBios";
+import LegalDocuments from "./components/LegalDocuments";
+import DueDiligence from "./components/DueDiligence";
+import PatentProvisional from "./components/PatentProvisional";
 import BenchmarksPage from "./pages/BenchmarksPage";
 
 function isLoggedIn() {
@@ -46,6 +51,16 @@ export default function App() {
           <Valuation />
           <Divider />
           <Financials />
+          <Divider />
+          <ProductRoadmap />
+          <Divider />
+          <TeamBios />
+          <Divider />
+          <LegalDocuments />
+          <Divider />
+          <DueDiligence />
+          <Divider />
+          <PatentProvisional />
           <Footer />
         </Layout>
       } />
