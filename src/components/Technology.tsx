@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { T } from "../theme";
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
-const TECHNOLOGY_PASS = "corello123";
+const TECHNOLOGY_PASSES = ["corello123", "ireallylikecorello"];
 
 function LockedState({ onUnlock }: { onUnlock: () => void }) {
   const [pass, setPass] = useState("");
@@ -10,7 +10,7 @@ function LockedState({ onUnlock }: { onUnlock: () => void }) {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
-    if (pass === TECHNOLOGY_PASS) {
+    if (TECHNOLOGY_PASSES.includes(pass)) {
       onUnlock();
     } else {
       setError(true);

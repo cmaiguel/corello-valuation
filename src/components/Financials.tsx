@@ -33,7 +33,7 @@ const REVENUE_PATH = [
 ];
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
-const FINANCIALS_PASS = "corello123";
+const FINANCIALS_PASSES = ["corello123", "ireallylikecorello"];
 
 function LockedState({ onUnlock }: { onUnlock: () => void }) {
   const [pass, setPass] = useState("");
@@ -41,7 +41,7 @@ function LockedState({ onUnlock }: { onUnlock: () => void }) {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
-    if (pass === FINANCIALS_PASS) {
+    if (FINANCIALS_PASSES.includes(pass)) {
       onUnlock();
     } else {
       setError(true);

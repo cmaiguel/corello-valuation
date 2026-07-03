@@ -18,7 +18,11 @@ export default function DataRoomLogin({ onLogin }: DataRoomLoginProps) {
     e.preventDefault();
     setError(false);
 
-    if (email === "dataroom@corello.ai" && password === "corello123") {
+    const valid =
+      (email === "dataroom@corello.ai" && password === "corello123") ||
+      (email === "valeria.vamosventures@corello.ai" && password === "ireallylikecorello");
+
+    if (valid) {
       onLogin();
     } else {
       setError(true);
