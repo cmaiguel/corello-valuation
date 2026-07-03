@@ -139,14 +139,14 @@ export default function Financials() {
 
               <div style={{ flex: 1, minHeight: 180 }}>
                 <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={REVENUE_PATH} margin={{ top: 8, right: 4, bottom: 0, left: 0 }}>
+                  <AreaChart data={REVENUE_PATH} margin={{ top: 8, right: 0, bottom: 0, left: 0 }}>
                     <defs>
                       <linearGradient id="goldGradFin" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%"  stopColor={T.gold} stopOpacity={0.35} />
                         <stop offset="95%" stopColor={T.gold} stopOpacity={0.01} />
                       </linearGradient>
                     </defs>
-                    <XAxis dataKey="label" tick={{ fill: "rgba(255,255,255,0.35)", fontSize: 10, fontFamily: T.fontMono }} axisLine={false} tickLine={false} />
+                    <XAxis dataKey="label" tick={false} axisLine={false} tickLine={false} height={0} padding={{ left: 48, right: 48 }} />
                     <YAxis hide />
                     <Tooltip
                       contentStyle={{ background: T.surface, border: `1px solid ${T.border}`, borderRadius: 8, fontSize: 12 }}

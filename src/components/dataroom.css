@@ -7,8 +7,8 @@ section[id] {
 
 /* Consistent vertical rhythm across every section */
 .dr-section {
-  padding-top: clamp(48px, 9vw, 80px);
-  padding-bottom: clamp(48px, 9vw, 80px);
+  padding-top: clamp(36px, 6vw, 56px);
+  padding-bottom: clamp(36px, 6vw, 56px);
 }
 
 /* Section eyebrow / kicker */
@@ -32,10 +32,10 @@ section[id] {
 
 /* Opportunity CTA */
 .dr-cta {
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 .dr-cta:hover {
-  transform: translateY(-2px);
+  border-color: #F5C200;
 }
 
 @media (max-width: 900px) {

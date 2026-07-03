@@ -1,12 +1,13 @@
 import React from "react";
 import { T } from "../theme";
+import "./dataroom.css";
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
 
 export default function Legal() {
   return (
-    <section id="legal" style={{ paddingTop: "clamp(40px, 8vw, 48px)", paddingBottom: "clamp(48px, 10vw, 80px)" }}>
-      <div style={{ display: "flex", justifyContent: "center", padding: "clamp(32px, 8vw, 40px) clamp(16px, 4vw, 24px)" }}>
+    <section id="legal" className="dr-section">
+      <div style={{ display: "flex", justifyContent: "center", padding: "clamp(16px, 4vw, 24px) 0" }}>
         <div style={{
           background: T.surface, border: `1px solid ${T.border}`,
           borderRadius: 16, padding: "clamp(32px, 6vw, 48px) clamp(32px, 6vw, 44px)",

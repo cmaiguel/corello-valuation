@@ -98,7 +98,7 @@ export default function RevenueProforma() {
   const filtered = activeStatus === "All" ? ROWS : ROWS.filter(r => r.status === activeStatus);
 
   return (
-    <section style={{ paddingTop: 60, paddingBottom: 60 }}>
+    <section style={{ paddingTop: 40, paddingBottom: 40 }}>
 
       <div style={{ marginBottom: 32 }}>
         <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.25em", marginBottom: 14, fontFamily: T.fontMono }}>
@@ -107,8 +107,11 @@ export default function RevenueProforma() {
         <h3 style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 800, color: T.text, letterSpacing: "-0.04em", margin: "0 0 10px", fontFamily: SHARP }}>
           2026 Revenue Build
         </h3>
-        <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)", fontWeight: 700, color: T.text, margin: "0 0 8px", fontFamily: SHARP, letterSpacing: "-0.02em" }}>
+        <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)", fontWeight: 700, color: T.text, margin: "0 0 10px", fontFamily: SHARP, letterSpacing: "-0.02em" }}>
           $700K contracted revenue in <span style={{ color: T.gold }}>6 months of operations.</span>
+        </p>
+        <p style={{ fontSize: 11, color: T.textSubtle, margin: 0, fontFamily: T.fontMono, lineHeight: 1.5 }}>
+          * Client names have been anonymized to protect customer confidentiality.
         </p>
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { T } from "../theme";
+import "./dataroom.css";
 
 const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
 const TECHNOLOGY_PASSES = ["corello123", "ireallylikecorello"];
@@ -70,11 +71,8 @@ function LockedState({ onUnlock }: { onUnlock: () => void }) {
 
 function Section({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
   return (
-    <div style={{ marginBottom: 60 }}>
-      <div style={{ marginBottom: 32 }}>
-        <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.25em", marginBottom: 12, fontFamily: "'Geist Mono', monospace" }}>
-          Technology
-        </div>
+    <div style={{ marginBottom: 44 }}>
+      <div style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: T.text, letterSpacing: "-0.04em", lineHeight: 1.2, margin: "0 0 12px", fontFamily: SHARP }}>
           {title}
         </h2>
@@ -107,21 +105,21 @@ function Card({ children, gold }: { children: React.ReactNode; gold?: boolean })
 }
 
 function Highlight({ children }: { children: React.ReactNode }) {
-  return <span style={{ color: T.gold, fontWeight: 700 }}>{children}</span>;
+  return <span style={{ color: T.text, fontWeight: 700 }}>{children}</span>;
 }
 
 export default function Technology() {
   const [unlocked, setUnlocked] = useState(false);
 
   return (
-    <section id="technology" style={{ paddingTop: "clamp(40px, 8vw, 48px)", paddingBottom: "clamp(48px, 10vw, 80px)" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", paddingLeft: "clamp(16px, 4vw, 24px)", paddingRight: "clamp(16px, 4vw, 24px)" }}>
+    <section id="technology" className="dr-section">
+      <div>
         {!unlocked ? (
           <LockedState onUnlock={() => setUnlocked(true)} />
         ) : (
           <>
         {/* Page Header */}
-        <div style={{ marginBottom: 60 }}>
+        <div style={{ marginBottom: 44 }}>
           <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.25em", marginBottom: 12, fontFamily: "'Geist Mono', monospace" }}>
             Technology
           </div>
@@ -196,9 +194,9 @@ export default function Technology() {
             </div>
           </Card>
 
-          <div style={{ marginTop: 24, padding: "20px 24px", background: "rgba(245,194,0,0.04)", border: `1px solid rgba(245,194,0,0.1)`, borderRadius: 12 }}>
-            <p style={{ margin: 0, fontSize: 13, color: T.text, lineHeight: 1.7, fontFamily: T.font }}>
-              <Highlight>Corello is ontology-free.</Highlight> Manufacturers can start ingesting data from day one without months of manual ontology work. Knowledge emerges from documents and conversations—no heavy configuration required.
+          <div style={{ marginTop: 24, padding: "28px 32px", background: "rgba(245,194,0,0.05)", border: `1px solid rgba(245,194,0,0.18)`, borderLeft: `3px solid ${T.gold}`, borderRadius: 12 }}>
+            <p style={{ margin: 0, fontSize: "clamp(16px, 1.9vw, 19px)", color: T.text, lineHeight: 1.65, fontFamily: T.font }}>
+              <span style={{ color: T.gold, fontWeight: 800 }}>Corello is ontology-free.</span> Manufacturers can start ingesting data from day one without months of manual ontology work. Knowledge emerges from documents and conversations—no heavy configuration required.
             </p>
           </div>
         </Section>
