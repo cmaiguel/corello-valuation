@@ -129,6 +129,43 @@ export default function Technology() {
           <p style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.15rem)", color: T.textMuted, lineHeight: 1.7, margin: 0, maxWidth: 720, fontFamily: T.font }}>
             Enterprise-grade AI infrastructure for capturing manufacturing tribal knowledge and turning it into operational intelligence.
           </p>
+
+          {/* Downloadable technical document */}
+          <a
+            href="/Corello_TechnicalDoc.pdf"
+            download
+            className="dr-cta"
+            style={{
+              marginTop: 28,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 16,
+              padding: "16px 22px",
+              background: T.surface,
+              border: `1px solid ${T.goldBorder}`,
+              borderLeft: `3px solid ${T.gold}`,
+              borderRadius: 12,
+              textDecoration: "none",
+            }}
+          >
+            <div style={{
+              width: 40, height: 40, flexShrink: 0, borderRadius: 8,
+              background: "rgba(245,194,0,0.1)", border: `1px solid ${T.goldBorder}`,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: 10, fontWeight: 800, color: T.gold, fontFamily: "'Geist Mono', monospace",
+            }}>
+              PDF
+            </div>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 4, fontFamily: "'Geist Mono', monospace" }}>
+                Download
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: T.text, fontFamily: SHARP, letterSpacing: "-0.01em" }}>
+                Corello Technical Documentation
+              </div>
+            </div>
+            <div style={{ fontSize: 20, color: T.gold, flexShrink: 0, marginLeft: 8, fontFamily: SHARP }}>↓</div>
+          </a>
         </div>
 
         {/* Section 1: Technical Architecture */}
