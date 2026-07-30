@@ -24,7 +24,7 @@ const SILVER = "#94A3B8";   // cool slate — short-term pipeline
 const ROSE   = "#C4748A";   // muted rose — long-term pipeline
 
 const SEGMENTS = [
-  { flex: 700, color: GOLD,   label: "Contracted Revenue",  value: "$700K",  note: "Signed contracted revenue · Jan–Jun 2026",              tag: "CONTRACTED" },
+  { flex: 864, color: GOLD,   label: "Contracted Revenue",  value: "$864K",  note: "Signed contracted revenue across clients",              tag: "CONTRACTED" },
   { flex: 300, color: SILVER, label: "Short-term Pipeline", value: "$300K",  note: "NDA/LOI in place · Expected to convert next 4 months",  tag: "SHORT-TERM" },
   { flex: 950, color: ROSE,   label: "Long-term Pipeline",  value: "$950K",  note: "Hot leads expected to close in the medium term",         tag: "LONG-TERM"  },
 ];
@@ -34,8 +34,8 @@ export default function Traction() {
     <section id="traction" className="cr-traction dr-section">
       <SectionHeader
         eyebrow="Commercial Traction"
-        title="$1.95M total commercial visibility."
-        sub="In just six months of 2026 operations, Corello grew from $0 to $700K in contracted revenue, with $1.25M of additional pipeline supporting the path to year-end ARR."
+        title="$2.11M total commercial visibility."
+        sub="Corello has grown from $0 to $864K in contracted revenue, with $1.25M of additional pipeline supporting the path to year-end ARR."
       />
 
       {/* Main card */}
@@ -78,7 +78,7 @@ export default function Traction() {
           display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12,
         }}>
           <div style={{ fontSize: 13, color: T.textMuted }}>8-Month Commercial Horizon</div>
-          <div style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, color: T.gold, letterSpacing: "-0.04em", fontFamily: SHARP }}>$1.95M</div>
+          <div style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, color: T.gold, letterSpacing: "-0.04em", fontFamily: SHARP }}>$2.11M</div>
         </div>
       </div>
 
@@ -96,7 +96,7 @@ export default function Traction() {
             Path to ~$1.2M target year-end ARR
           </div>
           <div style={{ fontSize: 12, color: T.textMuted, lineHeight: 1.55, maxWidth: 480 }}>
-            Pipeline conversion drives ARR. The $700K contracted base is the foundation; short-term and long-term pipeline conversion determines the year-end result.
+            Pipeline conversion drives ARR. The $864K contracted base is the foundation; short-term and long-term pipeline conversion determines the year-end result.
           </div>
         </div>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
