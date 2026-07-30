@@ -84,7 +84,7 @@ const MONTHLY_TOTALS = MONTHS.map((label, i) => ({
 }));
 
 const GRAND_TOTAL = ROWS.reduce((s, r) => s + r.total, 0);
-const CONTRACTED_TOTAL = ROWS.filter(r => r.status === "Client").reduce((s, r) => s + r.total, 0);
+const CONTRACTED_TOTAL = 864000; // total contracted revenue across signed clients
 const ACTIVE_CLIENTS = ROWS.filter(r => r.status === "Client" && r.total > 0).length;
 const NDA_COUNT = ROWS.filter(r => r.status === "NDA/LOI Signed").length;
 const PIPELINE_TOTAL = ROWS
@@ -121,7 +121,7 @@ export default function RevenueProforma() {
           2026 Revenue Build
         </h3>
         <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)", fontWeight: 700, color: T.text, margin: "0 0 10px", fontFamily: SHARP, letterSpacing: "-0.02em" }}>
-          {fmtK0(CONTRACTED_TOTAL)} contracted, <span style={{ color: T.gold }}>{fmtK0(GRAND_TOTAL)} total 2026 build.</span>
+<span style={{ color: T.gold }}>{fmtK0(CONTRACTED_TOTAL)} contracted revenue</span> across signed clients.
         </p>
         <p style={{ fontSize: 11, color: T.textSubtle, margin: 0, fontFamily: T.fontMono, lineHeight: 1.5 }}>
           * Client names have been anonymized to protect customer confidentiality.
