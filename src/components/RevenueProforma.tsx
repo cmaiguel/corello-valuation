@@ -5,7 +5,7 @@ const SHARP = '"Inter Tight", "Inter", "Geist", system-ui, sans-serif';
 
 const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
 
-type Status = "Client" | "NDA/LOI Signed" | "In Conversations" | "2026 Pipeline" | "2027 Pipeline";
+type Status = "Client" | "NDA/LOI Signed" | "In Conversations" | "2026 Pipeline" | "2027 Pipeline" | "No-Go";
 
 interface ProformaRow {
   status: Status;
@@ -20,69 +20,81 @@ const STATUS_COLOR: Record<Status, string> = {
   "In Conversations": "#F97316",
   "2026 Pipeline":    "#A78BFA",
   "2027 Pipeline":    "rgba(255,255,255,0.3)",
+  "No-Go":            "#B45D5D",
 };
 
 const Z = [0,0,0,0,0,0,0,0,0,0,0,0];
 
-const ROWS: ProformaRow[] = [
+//                                                     JAN FEB MAR   APR   MAY   JUN  JUL   AUG  SEP  OCT  NOV  DEC
+const RAW: Omit<ProformaRow, "total">[] = [
   // Clients
-  { status:"Client",         client:"Customer A",           m:[0,0,10000,10000,10000,0,5000,5000,5000,5000,0,0],       total:50000  },
-  { status:"Client",         client:"Customer B",           m:[0,0,0,0,0,4500,4500,4500,4500,4500,4500,4500],          total:31500  },
-  { status:"Client",         client:"Customer C",           m:[0,0,0,0,0,0,4500,4500,4500,4500,4500,4500],             total:27000  },
-  { status:"Client",         client:"Customer D",           m:[0,0,0,0,0,0,0,0,0,4500,4500,4500],                      total:13500  },
-  { status:"Client",         client:"Customer E",           m:[0,0,0,0,0,0,0,0,0,0,4500,4500],                         total:9000   },
-  { status:"Client",         client:"Customer F",           m:[0,0,0,0,0,0,0,0,0,0,0,4500],                            total:4500   },
-  { status:"Client",         client:"Customer G",           m:Z,                                                        total:0      },
-  { status:"Client",         client:"Customer H",           m:Z,                                                        total:0      },
-  { status:"Client",         client:"Customer I",           m:Z,                                                        total:0      },
-  { status:"Client",         client:"Customer J",           m:Z,                                                        total:0      },
-  { status:"Client",         client:"Customer K",           m:Z,                                                        total:0      },
-  { status:"Client",         client:"Customer L",           m:Z,                                                        total:0      },
-  { status:"Client",         client:"Customer M",           m:Z,                                                        total:0      },
-  // NDA/LOI
-  { status:"NDA/LOI Signed", client:"Customer N",           m:[0,0,0,0,0,0,4500,4500,4500,4500,4500,4500],            total:27000  },
-  { status:"NDA/LOI Signed", client:"Customer O",           m:[0,0,0,0,0,0,0,0,4500,4500,4500,4500],                  total:18000  },
-  { status:"NDA/LOI Signed", client:"Customer P",           m:[0,0,0,0,0,0,0,0,0,0,4500,4500],                         total:9000   },
-  { status:"NDA/LOI Signed", client:"Customer Q",           m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500],                total:22500  },
-  { status:"NDA/LOI Signed", client:"Customer R",           m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500],                total:22500  },
-  { status:"NDA/LOI Signed", client:"Customer S",           m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500],                total:22500  },
-  { status:"NDA/LOI Signed", client:"Customer V",           m:Z,                                                        total:0      },
-  // In Conversations
-  { status:"In Conversations", client:"Customer T",         m:Z,                                                        total:0      },
-  { status:"In Conversations", client:"Customer U",         m:Z,                                                        total:0      },
-  // 2026 Pipeline
-  { status:"2026 Pipeline",  client:"Customer W",           m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer X",           m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500],                total:22500  },
-  { status:"2026 Pipeline",  client:"Customer Y",           m:[0,0,0,0,0,0,0,0,4500,4500,4500,4500],                   total:18000  },
-  { status:"2026 Pipeline",  client:"Customer Z",           m:[0,0,0,0,0,0,0,0,0,0,4500,4500],                         total:9000   },
-  { status:"2026 Pipeline",  client:"Customer AA",          m:[0,0,0,0,0,0,0,0,0,0,4500,4500],                         total:9000   },
-  { status:"2026 Pipeline",  client:"Customer AB",          m:[0,0,0,0,0,0,0,0,0,4500,4500,4500],                      total:13500  },
-  { status:"2026 Pipeline",  client:"Customer AC",          m:[0,0,0,0,0,0,0,0,0,0,4500,4500],                         total:9000   },
-  { status:"2026 Pipeline",  client:"Customer AD",          m:[0,0,0,0,0,0,0,0,0,0,0,4500],                            total:4500   },
-  { status:"2026 Pipeline",  client:"Customer AE",          m:[0,0,0,0,0,0,0,0,0,0,4500,4500],                         total:9000   },
-  { status:"2026 Pipeline",  client:"Customer AF",          m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer AG",          m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer AH",          m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer AI",          m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer AJ",          m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer AK",          m:Z,                                                        total:0      },
-  { status:"2026 Pipeline",  client:"Customer AL",          m:Z,                                                        total:0      },
-  // 2027 Pipeline
-  { status:"2027 Pipeline",  client:"Customer AM",          m:Z,                                                        total:0      },
-  { status:"2027 Pipeline",  client:"Customer AN",          m:Z,                                                        total:0      },
-  { status:"2027 Pipeline",  client:"Customer AO",          m:Z,                                                        total:0      },
+  { status:"Client",           client:"Customer A",   m:[0,0,10000,10000,10000,0,5000,5000,5000,5000,0,0] },
+  { status:"Client",           client:"Customer B",   m:[0,0,0,0,0,4500,4500,4500,4500,4500,4500,4500] },
+  { status:"Client",           client:"Customer C",   m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500] },
+  { status:"Client",           client:"Customer D",   m:[0,0,0,0,0,0,0,0,0,4500,4500,4500] },
+  { status:"Client",           client:"Customer E",   m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"Client",           client:"Customer F",   m:[0,0,0,0,0,0,0,0,0,0,0,4500] },
+  { status:"Client",           client:"Customer G",   m:Z },
+  { status:"Client",           client:"Customer H",   m:Z },
+  { status:"Client",           client:"Customer I",   m:Z },
+  { status:"Client",           client:"Customer J",   m:Z },
+  { status:"Client",           client:"Customer K",   m:Z },
+  { status:"Client",           client:"Customer L",   m:Z },
+  { status:"Client",           client:"Customer M",   m:Z },
+  { status:"Client",           client:"Customer N",   m:Z },
+  { status:"Client",           client:"Customer O",   m:Z },
+  { status:"NDA/LOI Signed",   client:"Customer P",   m:[0,0,0,0,0,0,0,0,4500,4500,4500,4500] },
+  { status:"NDA/LOI Signed",   client:"Customer Q",   m:[0,0,0,0,0,0,0,0,4500,4500,4500,4500] },
+  { status:"NDA/LOI Signed",   client:"Customer R",   m:Z },
+  { status:"Client",           client:"Customer S",   m:[0,0,0,0,0,0,14000,0,0,4500,4500,4500] },
+  { status:"NDA/LOI Signed",   client:"Customer T",   m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500] },
+  { status:"NDA/LOI Signed",   client:"Customer U",   m:[0,0,0,0,0,0,0,4166,4166,4166,4166,4166] },
+  { status:"No-Go",            client:"Customer V",   m:Z },
+  { status:"NDA/LOI Signed",   client:"Customer W",   m:Z },
+  { status:"NDA/LOI Signed",   client:"Customer X",   m:Z },
+  { status:"2026 Pipeline",    client:"Customer Y",   m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"In Conversations", client:"Customer Z",   m:[0,0,0,0,0,0,0,4500,4500,4500,4500,4500] },
+  { status:"2026 Pipeline",    client:"Customer AA",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"In Conversations", client:"Customer AB",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"In Conversations", client:"Customer AC",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"In Conversations", client:"Customer AD",  m:[0,0,0,0,0,0,0,0,0,4500,4500,4500] },
+  { status:"In Conversations", client:"Customer AE",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"2026 Pipeline",    client:"Customer AF",  m:[0,0,0,0,0,0,0,0,0,0,0,4500] },
+  { status:"In Conversations", client:"Customer AG",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"2026 Pipeline",    client:"Customer AH",  m:Z },
+  { status:"In Conversations", client:"Customer AI",  m:[0,0,0,0,0,0,0,0,0,0,0,4500] },
+  { status:"2026 Pipeline",    client:"Customer AJ",  m:Z },
+  { status:"In Conversations", client:"Customer AK",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"2026 Pipeline",    client:"Customer AL",  m:Z },
+  { status:"2026 Pipeline",    client:"Customer AM",  m:Z },
+  { status:"In Conversations", client:"Customer AN",  m:[0,0,0,0,0,0,0,0,0,4500,4500,4500] },
+  { status:"In Conversations", client:"Customer AO",  m:[0,0,0,0,0,0,0,0,4500,4500,4500,0] },
+  { status:"2026 Pipeline",    client:"Customer AP",  m:[0,0,0,0,0,0,0,0,0,0,4500,4500] },
+  { status:"2026 Pipeline",    client:"Customer AQ",  m:Z },
+  { status:"2026 Pipeline",    client:"Customer AR",  m:Z },
+  { status:"2027 Pipeline",    client:"Customer AS",  m:Z },
+  { status:"In Conversations", client:"Customer AT",  m:Z },
 ];
+
+const ROWS: ProformaRow[] = RAW.map(r => ({ ...r, total: r.m.reduce((a, b) => a + b, 0) }));
 
 const MONTHLY_TOTALS = MONTHS.map((label, i) => ({
   label,
   revenue: ROWS.reduce((s, r) => s + r.m[i], 0),
 }));
 
-const GRAND_TOTAL = 351500;
+const GRAND_TOTAL = ROWS.reduce((s, r) => s + r.total, 0);
+const CONTRACTED_TOTAL = ROWS.filter(r => r.status === "Client").reduce((s, r) => s + r.total, 0);
+const ACTIVE_CLIENTS = ROWS.filter(r => r.status === "Client" && r.total > 0).length;
+const NDA_COUNT = ROWS.filter(r => r.status === "NDA/LOI Signed").length;
+const PIPELINE_TOTAL = ROWS
+  .filter(r => r.status === "In Conversations" || r.status === "2026 Pipeline" || r.status === "2027 Pipeline")
+  .reduce((s, r) => s + r.total, 0);
+const fmtK0 = (n: number) => `$${Math.round(n / 1000)}K`;
 
 const fmtK = (n: number) => n === 0 ? "—" : `$${(n/1000).toFixed(n % 1000 === 0 ? 0 : 1)}K`;
 
-const STATUSES: Status[] = ["Client","NDA/LOI Signed","In Conversations","2026 Pipeline","2027 Pipeline"];
+const STATUSES: Status[] = ["Client","NDA/LOI Signed","In Conversations","2026 Pipeline","2027 Pipeline","No-Go"];
 
 const STATUS_LABEL: Record<Status, string> = {
   "Client":           "Client",
@@ -90,6 +102,7 @@ const STATUS_LABEL: Record<Status, string> = {
   "In Conversations": "Conversations",
   "2026 Pipeline":    "Pipeline '26",
   "2027 Pipeline":    "Pipeline '27",
+  "No-Go":            "No-Go",
 };
 
 export default function RevenueProforma() {
@@ -108,7 +121,7 @@ export default function RevenueProforma() {
           2026 Revenue Build
         </h3>
         <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)", fontWeight: 700, color: T.text, margin: "0 0 10px", fontFamily: SHARP, letterSpacing: "-0.02em" }}>
-          $700K contracted revenue in <span style={{ color: T.gold }}>6 months of operations.</span>
+          {fmtK0(CONTRACTED_TOTAL)} contracted, <span style={{ color: T.gold }}>{fmtK0(GRAND_TOTAL)} total 2026 build.</span>
         </p>
         <p style={{ fontSize: 11, color: T.textSubtle, margin: 0, fontFamily: T.fontMono, lineHeight: 1.5 }}>
           * Client names have been anonymized to protect customer confidentiality.
@@ -118,10 +131,10 @@ export default function RevenueProforma() {
       {/* KPI row */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginBottom: 24 }}>
         {[
-          { label: "Contracted Revenue", value: "$700K",  color: T.gold    },
-          { label: "Active Clients",     value: "13",     color: T.gold    },
-          { label: "NDA / LOI",          value: "6",      color: T.green   },
-          { label: "In Pipeline",        value: "$1.1M",  color: "#A78BFA" },
+          { label: "Contracted Revenue", value: fmtK0(CONTRACTED_TOTAL),  color: T.gold    },
+          { label: "Active Clients",     value: String(ACTIVE_CLIENTS),   color: T.gold    },
+          { label: "NDA / LOI",          value: String(NDA_COUNT),        color: T.green   },
+          { label: "Active Pipeline",    value: fmtK0(PIPELINE_TOTAL),    color: "#A78BFA" },
         ].map(k => (
           <div key={k.label} style={{ background: T.surface, border: `1px solid ${T.border}`, borderRadius: 12, padding: "16px 18px" }}>
             <div style={{ fontSize: 10, fontWeight: 700, color: T.textSubtle, textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: T.fontMono, marginBottom: 6 }}>{k.label}</div>
@@ -201,7 +214,7 @@ export default function RevenueProforma() {
                 {fmtK(m.revenue)}
               </div>
             ))}
-            <div style={{ fontSize: 11, fontWeight: 800, color: T.gold, textAlign: "right", fontFamily: SHARP }}>$351,500</div>
+            <div style={{ fontSize: 11, fontWeight: 800, color: T.gold, textAlign: "right", fontFamily: SHARP }}>${GRAND_TOTAL.toLocaleString()}</div>
           </div>
         </div>
       </div>
