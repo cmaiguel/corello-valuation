@@ -40,11 +40,12 @@ function Avatar({ m }: { m: Member }) {
             onError={() => setFailed(true)}
             style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(1) contrast(1.05)" }}
           />
-          {/* Corello gold duotone wash */}
+          {/* Subtle Corello gold wash */}
           <div style={{
             position: "absolute", inset: 0,
             background: T.gold,
             mixBlendMode: "multiply",
+            opacity: 0.32,
             pointerEvents: "none",
           }} />
         </>
