@@ -23,7 +23,7 @@ function Avatar({ m }: { m: Member }) {
   return (
     <div style={{
       width: size, height: size, borderRadius: "50%",
-      overflow: "hidden", flexShrink: 0,
+      overflow: "hidden", flexShrink: 0, position: "relative", isolation: "isolate",
       border: `1px solid ${T.border2}`,
       background: T.surface2,
       display: "flex", alignItems: "center", justifyContent: "center",
@@ -33,12 +33,21 @@ function Avatar({ m }: { m: Member }) {
           {m.initials}
         </span>
       ) : (
-        <img
-          src={m.img}
-          alt={m.name}
-          onError={() => setFailed(true)}
-          style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(1) contrast(1.05)" }}
-        />
+        <>
+          <img
+            src={m.img}
+            alt={m.name}
+            onError={() => setFailed(true)}
+            style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(1) contrast(1.05)" }}
+          />
+          {/* Corello gold duotone wash */}
+          <div style={{
+            position: "absolute", inset: 0,
+            background: T.gold,
+            mixBlendMode: "multiply",
+            pointerEvents: "none",
+          }} />
+        </>
       )}
     </div>
   );
