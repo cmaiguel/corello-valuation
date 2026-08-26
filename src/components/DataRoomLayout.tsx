@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { id: "snapshot", label: "Snapshot" },
   { id: "market", label: "Opportunity" },
   { id: "traction", label: "Traction" },
+  { id: "team", label: "Team" },
   { id: "technology", label: "Technology" },
   { id: "financials", label: "Financials" },
   { id: "legal", label: "Legal" },

@@ -6,6 +6,7 @@ import DataRoomLayout from "./components/DataRoomLayout";
 import Snapshot from "./components/Snapshot";
 import Market from "./components/Market";
 import Traction from "./components/Traction";
+import Team from "./components/Team";
 import Technology from "./components/Technology";
 import Legal from "./components/Legal";
 import Financials from "./components/Financials";
@@ -49,6 +50,8 @@ export default function App() {
           <Market />
           <Divider />
           <Traction />
+          <Divider />
+          <Team />
           <Divider />
           <Technology />
           <Divider />
