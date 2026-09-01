@@ -22,25 +22,16 @@ export default function Legal() {
           }}>
             🔒
           </div>
-          <div style={{ fontSize: 18, fontWeight: 700, color: T.gold, marginBottom: 10, fontFamily: SHARP }}>Legal & Contracts</div>
-          <div style={{ fontSize: 13, color: T.textMuted, lineHeight: 1.65, marginBottom: 0 }}>
-            For contracts review, patents, and legal documents, please contact the founding team.
-          </div>
-
+          <div style={{ fontSize: 18, fontWeight: 700, color: T.gold, marginBottom: 18, fontFamily: SHARP }}>Legal & Contracts</div>
           <div style={{
-            borderTop: `1px solid ${T.border}`,
-            marginTop: 22, paddingTop: 20,
+            fontSize: 9, fontWeight: 700, color: T.gold,
+            textTransform: "uppercase", letterSpacing: "0.16em",
+            fontFamily: "'Geist Mono', monospace", marginBottom: 10,
           }}>
-            <div style={{
-              fontSize: 9, fontWeight: 700, color: T.gold,
-              textTransform: "uppercase", letterSpacing: "0.16em",
-              fontFamily: "'Geist Mono', monospace", marginBottom: 8,
-            }}>
-              Secure Access
-            </div>
-            <div style={{ fontSize: 12.5, color: T.textMuted, lineHeight: 1.65 }}>
-              A unique access link will be provided by the founding team via <span style={{ color: T.text, fontWeight: 600 }}>Carta</span>.
-            </div>
+            Secure Access
+          </div>
+          <div style={{ fontSize: 13, color: T.textMuted, lineHeight: 1.65 }}>
+            A unique access link will be provided by the founding team via <span style={{ color: T.text, fontWeight: 600 }}>Carta</span>.
           </div>
         </div>
       </div>
