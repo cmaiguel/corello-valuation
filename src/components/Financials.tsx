@@ -7,21 +7,39 @@ import Milestones from "./Milestones";
 import RevenueProforma from "./RevenueProforma";
 import "./dataroom.css";
 
+// Cap table — as of 1 September 2026
 type CapRow =
-  | { type: "group"; label: string; authorized: string; color: string }
-  | { type: "member"; label: string; shares: number; pct: string };
+  | { type: "group"; label: string }
+  | {
+      type: "holder";
+      name: string;
+      role: string;
+      current: number | null;  // null = no shares yet
+      currentPct: string;
+      fd: number;
+      fdPct: string;
+      viaStudio?: boolean;     // holds interest through ScaleUp Labs
+      pool?: boolean;          // reserved option pool, not an individual
+    };
 
 const CAP_TABLE: CapRow[] = [
-  { type: "group",  label: "Founding Team", authorized: "7,000,000", color: T.gold },
-  { type: "member", label: "Founding Team", shares: 7000000, pct: "98.9%" },
-  { type: "group",  label: "Managing Pool", authorized: "2,500,000", color: "#A78BFA" },
-  { type: "member", label: "Ben Karrasch · Chief Revenue Officer",  shares: 7000,    pct: "0.1%" },
-  { type: "group",  label: "Strategic Advisors", authorized: "500,000",   color: T.blue },
-  { type: "member", label: "Sid Bala",      shares: 35000,   pct: "0.5%" },
-  { type: "member", label: "Glenn Mueller", shares: 35000,   pct: "0.5%" },
-  { type: "group",  label: "Options Pool",  authorized: "700,000",   color: T.green },
-  { type: "group",  label: "Investor Pool", authorized: "3,000,000", color: "#F97316" },
+  { type: "group", label: "Founders" },
+  { type: "holder", name: "ScaleUp Labs", role: "Venture Studio",     current: 1750000, currentPct: "17.49%", fd: 1750000, fdPct: "14.28%" },
+  { type: "holder", name: "Andrea Ridi",  role: "Co-Founder",         current: 1750000, currentPct: "17.49%", fd: 1750000, fdPct: "14.28%", viaStudio: true },
+  { type: "holder", name: "Mark Roth",    role: "Co-Founder",         current: 1750000, currentPct: "17.49%", fd: 1750000, fdPct: "14.28%", viaStudio: true },
+  { type: "holder", name: "Greg Geehan",  role: "Co-Founder",         current: 1750000, currentPct: "17.49%", fd: 1750000, fdPct: "14.28%", viaStudio: true },
+
+  { type: "group", label: "Management Team" },
+  { type: "holder", name: "Carlos Maiguel",     role: "Co-Founder, CEO", current: 3000000, currentPct: "29.98%", fd: 3000000, fdPct: "24.48%" },
+  { type: "holder", name: "Reserved pool (ISO)", role: "Future hires",   current: null,    currentPct: "—",      fd: 1500000, fdPct: "12.24%", pool: true },
+
+  { type: "group", label: "Key Employees" },
+  { type: "holder", name: "Ben Karrasch",        role: "Chief Revenue Officer", current: 7000, currentPct: "0.07%", fd: 7000,   fdPct: "0.06%" },
+  { type: "holder", name: "Reserved pool (ISO)", role: "Employee grants",       current: null, currentPct: "—",     fd: 750000, fdPct: "6.12%", pool: true },
 ];
+
+const CAP_TOTALS = { current: 10007000, fd: 12257000 };
+const CAP_COLS = "minmax(0,1fr) 72px 50px 72px 50px";
 
 const REVENUE_PATH = [
   { label: "2026", arr: 1.2 },
@@ -171,35 +189,63 @@ export default function Financials() {
             {/* Cap Table */}
             <div style={{ background: T.surface, border: `1px solid ${T.border}`, borderRadius: 16, padding: "26px 28px" }}>
               <div style={{ fontSize: 10, fontWeight: 700, color: T.text, textTransform: "uppercase", letterSpacing: "0.14em", fontFamily: T.fontMono, marginBottom: 4 }}>Cap Table</div>
-              <div style={{ fontSize: 11, color: T.text, marginBottom: 20, fontFamily: T.fontMono }}>7M founder shares · 13.7M authorized</div>
+              <div style={{ fontSize: 11, color: T.text, marginBottom: 18, fontFamily: T.fontMono }}>10.0M current · 12.3M fully diluted · 1 Sep 2026</div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 70px 110px", gap: 8, padding: "5px 0", borderBottom: `1px solid ${T.border}`, marginBottom: 2 }}>
-                {["", "%", "Shares"].map((h, i) => (
+              {/* Column group header */}
+              <div style={{ display: "grid", gridTemplateColumns: CAP_COLS, gap: 6, paddingBottom: 6 }}>
+                <div />
+                <div style={{ gridColumn: "span 2", fontSize: 9, fontWeight: 700, color: T.textSubtle, textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: T.fontMono, textAlign: "right" }}>Current</div>
+                <div style={{ gridColumn: "span 2", fontSize: 9, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: T.fontMono, textAlign: "right" }}>Fully Diluted</div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: CAP_COLS, gap: 6, padding: "5px 0", borderBottom: `1px solid ${T.border}`, marginBottom: 2 }}>
+                {["Holder", "Shares", "%", "Shares", "%"].map((h, i) => (
                   <div key={i} style={{ fontSize: 9, fontWeight: 700, color: T.textSubtle, textTransform: "uppercase", letterSpacing: "0.1em", fontFamily: T.fontMono, textAlign: i === 0 ? "left" : "right" }}>{h}</div>
                 ))}
               </div>
 
               {CAP_TABLE.map((row, i) => row.type === "group" ? (
-                <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 70px 110px", gap: 8, padding: "10px 0", borderBottom: `1px solid rgba(255,255,255,0.04)` }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-                    <div style={{ width: 3, height: 12, borderRadius: 2, background: row.color, flexShrink: 0 }} />
-                    <div style={{ fontSize: 12, fontWeight: 700, color: T.text, fontFamily: SHARP }}>{row.label}</div>
-                  </div>
-                  <div />
-                  <div style={{ fontSize: 11, color: T.textSubtle, textAlign: "right", fontFamily: T.fontMono }}>{row.authorized}</div>
+                <div key={i} style={{ padding: "12px 0 6px" }}>
+                  <div style={{ fontSize: 9, fontWeight: 700, color: T.textSubtle, textTransform: "uppercase", letterSpacing: "0.16em", fontFamily: T.fontMono }}>{row.label}</div>
                 </div>
               ) : (
-                <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 70px 110px", gap: 8, padding: "6px 0", borderBottom: `1px solid rgba(255,255,255,0.025)` }}>
-                  <div style={{ paddingLeft: 17, fontSize: 11, color: T.textMuted }}>{row.label}</div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textAlign: "right", fontFamily: T.fontMono }}>{row.pct}</div>
-                  <div style={{ fontSize: 11, color: T.text, textAlign: "right", fontFamily: T.fontMono }}>{row.shares.toLocaleString()}</div>
+                <div key={i} style={{
+                  display: "grid", gridTemplateColumns: CAP_COLS, gap: 6,
+                  padding: "7px 0", borderBottom: `1px solid rgba(255,255,255,0.03)`,
+                  alignItems: "center",
+                }}>
+                  <div style={{
+                    display: "flex", alignItems: "center", gap: 8,
+                    paddingLeft: row.viaStudio ? 10 : 0,
+                    borderLeft: row.viaStudio ? `2px solid ${T.gold}` : "2px solid transparent",
+                  }}>
+                    <div style={{ minWidth: 0 }}>
+                      <div style={{ fontSize: 11.5, fontWeight: 600, color: row.pool ? T.textMuted : T.text, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{row.name}</div>
+                      <div style={{ fontSize: 9, color: T.textSubtle, fontFamily: T.fontMono, textTransform: "uppercase", letterSpacing: "0.06em", marginTop: 1 }}>{row.role}</div>
+                    </div>
+                  </div>
+                  <div style={{ fontSize: 10.5, color: row.current ? T.textMuted : T.textSubtle, textAlign: "right", fontFamily: T.fontMono }}>
+                    {row.current ? row.current.toLocaleString() : "—"}
+                  </div>
+                  <div style={{ fontSize: 10.5, color: T.textMuted, textAlign: "right", fontFamily: T.fontMono }}>{row.currentPct}</div>
+                  <div style={{ fontSize: 10.5, color: T.text, textAlign: "right", fontFamily: T.fontMono }}>{row.fd.toLocaleString()}</div>
+                  <div style={{ fontSize: 10.5, fontWeight: 700, color: T.gold, textAlign: "right", fontFamily: T.fontMono }}>{row.fdPct}</div>
                 </div>
               ))}
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 70px 110px", gap: 8, padding: "11px 0", borderTop: `1px solid ${T.border}`, marginTop: 4 }}>
-                <div style={{ fontSize: 12, fontWeight: 700, color: T.text, fontFamily: SHARP }}>Totals</div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textAlign: "right", fontFamily: T.fontMono }}>100%</div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: T.gold, textAlign: "right", fontFamily: T.fontMono }}>7,077,000</div>
+              <div style={{ display: "grid", gridTemplateColumns: CAP_COLS, gap: 6, padding: "11px 0", borderTop: `1px solid ${T.border}`, marginTop: 4 }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: T.text, fontFamily: SHARP }}>Total</div>
+                <div style={{ fontSize: 10.5, fontWeight: 700, color: T.textMuted, textAlign: "right", fontFamily: T.fontMono }}>{CAP_TOTALS.current.toLocaleString()}</div>
+                <div style={{ fontSize: 10.5, fontWeight: 700, color: T.textMuted, textAlign: "right", fontFamily: T.fontMono }}>100%</div>
+                <div style={{ fontSize: 10.5, fontWeight: 700, color: T.gold, textAlign: "right", fontFamily: T.fontMono }}>{CAP_TOTALS.fd.toLocaleString()}</div>
+                <div style={{ fontSize: 10.5, fontWeight: 700, color: T.gold, textAlign: "right", fontFamily: T.fontMono }}>100%</div>
+              </div>
+
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 8, marginTop: 14 }}>
+                <div style={{ width: 2, alignSelf: "stretch", background: T.gold, flexShrink: 0, borderRadius: 1 }} />
+                <div style={{ fontSize: 10, color: T.textSubtle, lineHeight: 1.55 }}>
+                  Holders marked with the gold rule hold their interests through ScaleUp Labs.
+                </div>
               </div>
             </div>
           </div>
