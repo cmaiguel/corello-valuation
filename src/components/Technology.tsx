@@ -281,7 +281,156 @@ export default function Technology() {
           </Card>
         </Section>
 
-        {/* Section 5: Deployment and Security */}
+        {/* Section 5: One Coworker, Infinite Kits */}
+        <Section
+          title="One Coworker. Infinite Kits."
+          subtitle="The platform architecture that turns bespoke customer projects into a single, scalable product."
+        >
+          {/* Anatomy: body / memory / mind */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginBottom: 24 }}>
+            <Card>
+              <div style={{ fontSize: 10, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.16em", fontFamily: "'Geist Mono', monospace", marginBottom: 6 }}>
+                The Body
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.text, marginBottom: 12, fontFamily: SHARP, letterSpacing: "-0.01em" }}>Coworker</div>
+              <div style={{ fontSize: 12, color: T.textSubtle, marginBottom: 10, fontFamily: "'Geist Mono', monospace" }}>Built once · shared by every customer</div>
+              <ul style={{ margin: 0, paddingLeft: 18, listStyle: "disc" }}>
+                <li style={{ marginBottom: 8 }}>Lives in existing channels — email, chat, calls, tickets, MCP</li>
+                <li style={{ marginBottom: 8 }}>Thinks with the customer's knowledge graph</li>
+                <li style={{ marginBottom: 8 }}>Stops at the checkpoints the company defines</li>
+                <li>Writes every interaction back to the graph</li>
+              </ul>
+            </Card>
+
+            <Card>
+              <div style={{ fontSize: 10, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.16em", fontFamily: "'Geist Mono', monospace", marginBottom: 6 }}>
+                The Memory
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.text, marginBottom: 12, fontFamily: SHARP, letterSpacing: "-0.01em" }}>Knowledge Graph</div>
+              <div style={{ fontSize: 12, color: T.textSubtle, marginBottom: 10, fontFamily: "'Geist Mono', monospace" }}>Knowledge · data · models</div>
+              <ul style={{ margin: 0, paddingLeft: 18, listStyle: "disc" }}>
+                <li style={{ marginBottom: 8 }}>Documents, drawings, procedures and quotes become entities and relations</li>
+                <li style={{ marginBottom: 8 }}>Connects to databases, ERP and MCP servers</li>
+                <li>Outlives tools, models and staff turnover — the durable asset</li>
+              </ul>
+            </Card>
+
+            <Card gold>
+              <div style={{ fontSize: 10, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.16em", fontFamily: "'Geist Mono', monospace", marginBottom: 6 }}>
+                The Mind
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.text, marginBottom: 12, fontFamily: SHARP, letterSpacing: "-0.01em" }}>Kit</div>
+              <div style={{ fontSize: 12, color: T.textSubtle, marginBottom: 10, fontFamily: "'Geist Mono', monospace" }}>The only part that changes per customer</div>
+              <ul style={{ margin: 0, paddingLeft: 18, listStyle: "disc" }}>
+                <li style={{ marginBottom: 8 }}>The skill itself</li>
+                <li style={{ marginBottom: 8 }}>Permissions and limits</li>
+                <li style={{ marginBottom: 8 }}>Checkpoints for the human expert</li>
+                <li>Acceptance criteria</li>
+              </ul>
+            </Card>
+          </div>
+
+          {/* Scaling economics */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginBottom: 24 }}>
+            <Card>
+              <div style={{ fontSize: 10, fontWeight: 700, color: T.textSubtle, textTransform: "uppercase", letterSpacing: "0.16em", fontFamily: "'Geist Mono', monospace", marginBottom: 10 }}>
+                Before
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.textMuted, marginBottom: 10, fontFamily: SHARP }}>N customers = N applications</div>
+              <p style={{ margin: 0, fontSize: 13, color: T.textMuted, lineHeight: 1.6 }}>
+                New UI, new backend, new deployment and new maintenance every time. Engineering effort grew with every customer.
+              </p>
+            </Card>
+
+            <Card gold>
+              <div style={{ fontSize: 10, fontWeight: 700, color: T.gold, textTransform: "uppercase", letterSpacing: "0.16em", fontFamily: "'Geist Mono', monospace", marginBottom: 10 }}>
+                After
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.text, marginBottom: 10, fontFamily: SHARP }}>N customers = 1 coworker + N kits</div>
+              <p style={{ margin: 0, fontSize: 13, color: T.text, lineHeight: 1.6 }}>
+                Same engine, same channels, same graph machinery. Effort now grows with each <Highlight>kit family</Highlight>, not with each customer.
+              </p>
+            </Card>
+          </div>
+
+          <div style={{ marginBottom: 24, padding: "24px 28px", background: "rgba(245,194,0,0.05)", border: `1px solid rgba(245,194,0,0.18)`, borderLeft: `3px solid ${T.gold}`, borderRadius: 12 }}>
+            <p style={{ margin: 0, fontSize: "clamp(15px, 1.8vw, 18px)", color: T.text, lineHeight: 1.6, fontFamily: T.font }}>
+              <span style={{ color: T.gold, fontWeight: 800 }}>The marginal product is a kit, not an app.</span> The coworker stays identical for every customer, so each new deployment compounds the platform instead of forking it.
+            </p>
+          </div>
+
+          {/* Kit compiler */}
+          <Card>
+            <div style={{ fontSize: 13, fontWeight: 700, color: T.gold, marginBottom: 12, fontFamily: SHARP }}>Astro-Code — the kit compiler</div>
+            <div style={{
+              display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10,
+              padding: "14px 16px", marginBottom: 14,
+              background: "rgba(255,255,255,0.02)", border: `1px solid ${T.border}`, borderRadius: 8,
+              fontFamily: "'Geist Mono', monospace", fontSize: 12, color: T.text,
+            }}>
+              {["Compile", "Gate", "Execute", "Verify"].map((step, i) => (
+                <React.Fragment key={step}>
+                  <span style={{ fontWeight: 700 }}>{step}</span>
+                  {i < 3 && <span style={{ color: T.gold }}>→</span>}
+                </React.Fragment>
+              ))}
+            </div>
+            <ul style={{ margin: 0, paddingLeft: 18, listStyle: "disc" }}>
+              <li style={{ marginBottom: 8 }}>Compiles a business problem plus the customer's graph into a <Highlight>verified kit</Highlight></li>
+              <li style={{ marginBottom: 8 }}>The human expert decides at every gate — nothing ships unreviewed</li>
+              <li style={{ marginBottom: 8 }}>Acceptance criteria and blind verification before install</li>
+              <li>Provenance is written back to the graph</li>
+            </ul>
+          </Card>
+
+          {/* Kit shelf */}
+          <div style={{ marginTop: 24 }}>
+            <Card>
+              <div style={{ fontSize: 13, fontWeight: 700, color: T.gold, marginBottom: 6, fontFamily: SHARP }}>The kit shelf</div>
+              <p style={{ margin: "0 0 16px", fontSize: 13, color: T.textMuted, lineHeight: 1.6 }}>
+                Kits fall into two families: <Highlight>general-purpose</Highlight> kits that work for any company out of the box (and can be white-labelled by partners), and kits <Highlight>compiled from a single customer's graph</Highlight>.
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {["Quotation", "Compliance", "Pricing", "Training", "Forecasting", "Onboarding", "Anomaly detection", "Cost estimation"].map(k => (
+                  <span key={k} style={{
+                    fontSize: 11, fontWeight: 700, color: T.gold,
+                    background: "rgba(245,194,0,0.07)", border: `1px solid ${T.goldBorder}`,
+                    borderRadius: 6, padding: "6px 11px", fontFamily: "'Geist Mono', monospace",
+                  }}>{k}</span>
+                ))}
+                <span style={{
+                  fontSize: 11, fontWeight: 700, color: T.textSubtle,
+                  border: `1px dashed ${T.border2}`, borderRadius: 6, padding: "6px 11px",
+                  fontFamily: "'Geist Mono', monospace",
+                }}>next…</span>
+              </div>
+            </Card>
+          </div>
+
+          {/* Compounding wheel */}
+          <div style={{ marginTop: 24 }}>
+            <Card gold>
+              <div style={{ fontSize: 13, fontWeight: 700, color: T.gold, marginBottom: 14, fontFamily: SHARP }}>Why it compounds</div>
+              <div style={{
+                display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginBottom: 16,
+                fontFamily: "'Geist Mono', monospace", fontSize: 12, color: T.text,
+              }}>
+                {["Knowledge", "Kits", "Coworker", "Interactions"].map((step, i) => (
+                  <React.Fragment key={step}>
+                    <span style={{ fontWeight: 700 }}>{step}</span>
+                    <span style={{ color: T.gold }}>→</span>
+                  </React.Fragment>
+                ))}
+                <span style={{ color: T.textSubtle }}>back to Knowledge</span>
+              </div>
+              <p style={{ margin: 0, fontSize: 13, color: T.text, lineHeight: 1.7 }}>
+                Every exchange writes back to the graph, so kits get better, the coworker does more of the work, and the knowledge base deepens. Most AI tooling depreciates as models change — <Highlight>this architecture appreciates, because the asset is the customer's knowledge graph.</Highlight>
+              </p>
+            </Card>
+          </div>
+        </Section>
+
+        {/* Section 6: Deployment and Security */}
         <Section title="Deployment and Security">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24, marginBottom: 0 }}>
             <Card>
