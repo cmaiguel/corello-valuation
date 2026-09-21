@@ -20,7 +20,6 @@ export default function DataRoomLogin({ onLogin }: DataRoomLoginProps) {
 
     const valid =
       (email === "dataroom@corello.ai" && password === "corello123") ||
-      (email === "valeria.vamosventures@corello.ai" && password === "ireallylikecorello") ||
       (email === "ning.sandhillangels@corello.ai" && password === "ireallylikecorello") ||
       (email === "angeles@corello.ai" && password === "ireallylikecorello") ||
       (email === "eric.intersystems@corello.ai" && password === "ireallylikecorello") ||
